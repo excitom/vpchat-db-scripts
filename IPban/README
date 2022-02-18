@@ -1,0 +1,14 @@
+When signalServer runs from a CGI, it is run by user 'nobody'.
+It can't send the HUP signal to vpusers.exe since vpusers is 
+run by user 'vplaces'.
+
+signalServer is a program compiled from signalServer.c, that sends
+the HUP. It must run with setUID privilege (chmod +s) so that
+when invoked from a CGI it will switch to user 'vplaces'.
+
+I used to use signalServer.pl for this purpose, but either Perl or
+Solaris has gotten more strict -- I can't get it to actually 
+switch to vplaces any more when run from a CGI. So, I had to resort
+to a C program.
+
+BE SURE signalServer HAS SETUID PRIVILEGE OR THE CGI's WON'T WORK

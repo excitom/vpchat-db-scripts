@@ -1,0 +1,18 @@
+#!/usr/local/bin/ksh
+
+/u/vplaces/scripts/sybscripts/bcpout > /u/vplaces/scripts/sybscripts/bcpout.out
+
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/drop_dbs.sql -o/u/vplaces/scripts/sybscripts/drop_dbs.out
+
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/drop_devices.sql -o/u/vplaces/scripts/sybscripts/drop_devices.out 
+
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE << + > /u/vplaces/scripts/sybscripts/config.out
+use master
+go
+sp_configure "number of devices", 20
+go
++
+
+/u/vplaces/scripts/sybscripts/remove_phys_devs.sh > /u/vplaces/scripts/sybscripts/remove_phys_devs.out
+
+

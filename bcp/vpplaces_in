@@ -1,0 +1,2 @@
+#!/bin/sh
+ bcp vpplaces.dbo.persistentPlaces in persistentPlaces -c -Usa -SSYBASE -PUBIQUE

@@ -1,0 +1,4 @@
+#!/usr/bin/ksh
+
+cat /u/vplaces/scripts/sybscripts/dbcc_updstats.out | grep Msg
+

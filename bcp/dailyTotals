@@ -1,0 +1,5 @@
+10.0
+3
+1	SYBDATETIME4	0	4	""	1	time
+2	SYBINT2	0	2	""	2	type
+3	SYBINT4	0	4	""	3	value

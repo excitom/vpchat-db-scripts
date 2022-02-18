@@ -1,0 +1,29 @@
+#!/bin/sh
+echo "Do you REALLY want to do this?"
+exit
+ bcp vpusers.dbo.configurationKeys in /logs/backup/configurationKeys -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.history in /logs/backup/history -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.penalties in /logs/backup/penalties -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.penaltyTypes in /logs/backup/penaltyTypes -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.privilegeTypes in /logs/backup/privilegeTypes -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.userPrivileges in /logs/backup/userPrivileges -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.registration in /logs/backup/registration -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.users in /logs/backup/users -c -E -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.warnings in /logs/backup/warnings -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.backup_log in /logs/backup/backup_log -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.emptyPassword in /logs/backup/emptyPassword -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.userDetails in /logs/backup/userDetails -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.badUsers in /logs/backup/badUsers -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.passwordChanges in /logs/backup/passwordChanges -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.privilegeDomains in /logs/backup/privilegeDomains -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.bannedNames in /logs/backup/bannedNames -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.userAccounts in /logs/backup/userAccounts -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.accountBalance in /logs/backup/accountBalance -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.payments in /logs/backup/payments -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.ccPayments in /logs/backup/ccPayments -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.heldPayments in /logs/backup/heldPayments -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.subscriptions in /logs/backup/subscriptions -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.creditCards in /logs/backup/creditCards -c -E -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.referralHistory in /logs/backup/referralHistory -c -E -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.accountHistory in /logs/backup/accountHistory -c -Usa -SSYBASE -PUBIQUE
+ bcp vpusers.dbo.paypalEmail in /logs/backup/paypalEmail -c -Usa -SSYBASE -PUBIQUE

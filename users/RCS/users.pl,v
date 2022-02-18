@@ -1,0 +1,655 @@
+head	1.7;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	99.11.08.05.55.53;	author vplaces;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	99.11.08.05.48.51;	author vplaces;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.05.06.13.40.15;	author vplaces;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.05.06.13.18.05;	author vplaces;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.05.06.13.08.27;	author vplaces;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	98.08.15.05.09.46;	author vplaces;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	98.02.17.19.38.10;	author vplaces;	state Exp;
+branches;
+next	;
+
+
+desc
+@build chat/PAL usage report
+@
+
+
+1.7
+log
+@add code to clean out week old HTML files
+@
+text
+@#!/usr/local/bin/perl -w
+#
+# show peak chat and PAL users, and minutes of usage
+#
+# Tom Lang 2/98
+#
+
+use Date::Manip;
+use Getopt::Long;
+use vars qw(
+$OPT_date
+$G_exportdir
+);
+
+(
+$OPT_date,
+$G_exportdir
+) = (''x2);
+
+####################
+#
+# START HERE
+#
+
+$input_date = ($#ARGV == 0) ? $ARGV[0] : "yesterday";
+$G_isql_exe = '/u/vplaces/s/sybase/bin/isql -SSYBASE -Uvpplaces -Pvpplaces';
+$G_statdir = '/u/vplaces/scripts/users/';
+$G_exportdir = '/logs/users/';
+
+if ($input_date eq "yesterday") {
+	#
+	# clean out old HTML files
+	#
+	$oldDate = &ParseDate('last week');
+	$old = &UnixDate($oldDate, '%Q');
+	$outfn = join('', $G_exportdir, $old, ".users.html");
+	unlink $outfn if (-f $outfn);
+}
+
+@@hours = (
+"12am","1am","2am","3am","4am","5am","6am","7am","8am","9am","10am","11am",
+"12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm"
+);
+
+$TZ = `date "+%Z"`;
+$offset = ($TZ =~ "DT") ? 7 : 8;	# offset from GMT
+$OPT_date = &ParseDate("$input_date $offset:00:00");
+($G_date, $out) = &UnixDate($OPT_date, '%F', '%Q');
+$G_start = &UnixDate($OPT_date, '%d %b %Y %H:%M');
+$G_end = &UnixDate(DateCalc($OPT_date, "+23 hours"), '%d %b %Y %H:%M');
+
+$tempsql = $G_statdir . ".temp.sql.$$";
+$ENV{'SYBASE'} ||= '/t/t/s/sybase';
+
+$sql_cmd = qq|getHourlyAvgStatistics "$G_start", "$G_end"\ngo\n|;
+open (SQL_IN, ">$tempsql") || die "Can't write to $tempsql : $!\n";
+print SQL_IN $sql_cmd;
+close(SQL_IN);
+
+open (SQL_OUT, "$G_isql_exe -i $tempsql |") || die "Can't read from $G_isql_exe -i $tempsql : $!\n";
+@@lines = <SQL_OUT>;
+close SQL_OUT;
+
+$h = 0;
+$avgCombinedMax = $avgChatMax = $avgPALMax = 0;
+$avgCombinedMin = $avgChatMin = $avgPALMin = 99999999;
+for ($i = 0; $i <= $#lines; ) {
+	$_ = $lines[$i++];
+	next unless (/^\s*\d/);
+	chomp;
+	@@data = split;
+	$avgCombined[$h] = $data[4] + 0;
+	$avgChat[$h] = $data[5] + 0;
+	$_ = $lines[$i++];
+	chomp;
+	$avgPAL[$h] = $_ + 0;
+	if ($avgCombined[$h] > $avgCombinedMax) {
+		$avgCombinedMax = $avgCombined[$h];
+		$avgCombinedMaxH = $h;
+	}
+	if ($avgCombined[$h] < $avgCombinedMin) {
+		$avgCombinedMin = $avgCombined[$h];
+		$avgCombinedMinH = $h;
+	}
+	if ($avgChat[$h] > $avgChatMax) {
+		$avgChatMax = $avgChat[$h];
+		$avgChatMaxH = $h;
+	}
+	if ($avgChat[$h] < $avgChatMin) {
+		$avgChatMin = $avgChat[$h];
+		$avgChatMinH = $h;
+	}
+	if ($avgPAL[$h] > $avgPALMax) {
+		$avgPALMax = $avgPAL[$h];
+		$avgPALMaxH = $h;
+	}
+	if ($avgPAL[$h] < $avgPALMin) {
+		$avgPALMin = $avgPAL[$h];
+		$avgPALMinH = $h;
+	}
+	$h++;
+}
+
+$sql_cmd = qq|getHourlyMaxStatistics "$G_start", "$G_end"\ngo\n|;
+$tempsql = $G_statdir . ".temp.sql.$$";
+
+$ENV{'SYBASE'} ||= '/t/t/s/sybase';
+
+open (SQL_IN, ">$tempsql") || die "Can't write to $tempsql : $!\n";
+print SQL_IN $sql_cmd;
+close(SQL_IN);
+
+open (SQL_OUT, "$G_isql_exe -i $tempsql |") || die "Can't read from $G_isql_exe -i $tempsql : $!\n";
+@@lines = <SQL_OUT>;
+close SQL_OUT;
+
+$h = 0;
+$maxCombinedMax = $maxChatMax = $maxPALMax = 0;
+$maxCombinedMin = $maxChatMin = $maxPALMin = 99999999;
+for ($i = 0; $i <= $#lines; ) {
+	$_ = $lines[$i++];
+	next unless (/^\s*\d/);
+	chomp;
+	@@data = split;
+	$maxCombined[$h] = $data[4] + 0;
+	$maxChat[$h] = $data[5] + 0;
+	$_ = $lines[$i++];
+	chomp;
+	$maxPAL[$h] = $_ + 0;
+	if ($maxCombined[$h] > $maxCombinedMax) {
+		$maxCombinedMax = $maxCombined[$h];
+		$maxCombinedMaxH = $h;
+	}
+	if ($maxCombined[$h] < $maxCombinedMin) {
+		$maxCombinedMin = $maxCombined[$h];
+		$maxCombinedMinH = $h;
+	}
+	if ($maxChat[$h] > $maxChatMax) {
+		$maxChatMax = $maxChat[$h];
+		$maxChatMaxH = $h;
+	}
+	if ($maxChat[$h] < $maxChatMin) {
+		$maxChatMin = $maxChat[$h];
+		$maxChatMinH = $h;
+	}
+	if ($maxPAL[$h] > $maxPALMax) {
+		$maxPALMax = $maxPAL[$h];
+		$maxPALMaxH = $h;
+	}
+	if ($maxPAL[$h] < $maxPALMin) {
+		$maxPALMin = $maxPAL[$h];
+		$maxPALMinH = $h;
+	}
+	$h++;
+}
+
+$sql_cmd = qq|getHourlyMinStatistics "$G_start", "$G_end"\ngo\n|;
+$tempsql = $G_statdir . ".temp.sql.$$";
+
+$ENV{'SYBASE'} ||= '/t/t/s/sybase';
+
+open (SQL_IN, ">$tempsql") || die "Can't write to $tempsql : $!\n";
+print SQL_IN $sql_cmd;
+close(SQL_IN);
+
+open (SQL_OUT, "$G_isql_exe -i $tempsql |") || die "Can't read from $G_isql_exe -i $tempsql : $!\n";
+@@lines = <SQL_OUT>;
+close SQL_OUT;
+
+$h = 0;
+$minCombinedMax = $minChatMax = $minPALMax = 0;
+$minCombinedMin = $minChatMin = $minPALMin = 99999999;
+for ($i = 0; $i <= $#lines; ) {
+	$_ = $lines[$i++];
+	next unless (/^\s*\d/);
+	chomp;
+	@@data = split;
+	$minCombined[$h] = $data[4] + 0;
+	$minChat[$h] = $data[5] + 0;
+	$_ = $lines[$i++];
+	chomp;
+	$minPAL[$h] = $_ + 0;
+	if ($minCombined[$h] > $minCombinedMax) {
+		$minCombinedMax = $minCombined[$h];
+		$minCombinedMaxH = $h;
+	}
+	if ($minCombined[$h] < $minCombinedMin) {
+		$minCombinedMin = $minCombined[$h];
+		$minCombinedMinH = $h;
+	}
+	if ($minChat[$h] > $minChatMax) {
+		$minChatMax = $minChat[$h];
+		$minChatMaxH = $h;
+	}
+	if ($minChat[$h] < $minChatMin) {
+		$minChatMin = $minChat[$h];
+		$minChatMinH = $h;
+	}
+	if ($minPAL[$h] > $minPALMax) {
+		$minPALMax = $minPAL[$h];
+		$minPALMaxH = $h;
+	}
+	if ($minPAL[$h] < $minPALMin) {
+		$minPALMin = $minPAL[$h];
+		$minPALMinH = $h;
+	}
+	$h++;
+}
+$outfn = join('', $G_exportdir, $out, ".users.html");
+$a = "#ffcccc";
+$b = "#ccffcc";
+$c = "#ccccff";
+$hi = "#66ff66";
+$lo = "#ff6666";
+
+open (HTML, ">$outfn") || die "Can't write to $outfn : $!";
+print HTML <<AVGTBL;
+<html>
+<head>
+<title>PAL/Chat Usage by Hour</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>
+PAL/Chat Usage by Hour
+</h1>
+<hr size=5>
+<center><font size=-1>[ <a href="index.html">Daily Index</a> ] </font></center>
+<hr>
+<h3>$G_date $TZ</h3>
+<p>
+<table border=3>
+<tr>
+ <td rowspan=2>&nbsp;</td><th bgcolor=$a colspan=2>Combined</th><th bgcolor=$b colspan=2>Chat</th><th bgcolor=$c colspan=2>PAL</th>
+</tr>
+<tr>
+ <th bgcolor=$a>Users</th><th bgcolor=$a>Hour</th><th bgcolor=$b>Users</th><th bgcolor=$b>Hour</th><th bgcolor=$c>Users</th><th bgcolor=$c>Hour</th>
+</tr>
+<tr>
+ <th>Daily Minimum</th>
+ <td bgcolor=$a align=right>$minCombinedMin</td>
+ <td bgcolor=$a align=right>$hours[$minCombinedMinH]</td>
+ <td bgcolor=$b align=right>$minChatMin</td>
+ <td bgcolor=$b align=right>$hours[$minChatMinH]</td>
+ <td bgcolor=$c align=right>$minPALMin</td>
+ <td bgcolor=$c align=right>$hours[$minPALMinH]</td>
+</tr>
+<tr>
+ <th>Daily Maximum</th>
+ <td bgcolor=$a align=right>$maxCombinedMax</td>
+ <td bgcolor=$a align=right>$hours[$maxCombinedMaxH]</td>
+ <td bgcolor=$b align=right>$maxChatMax</td> 
+ <td bgcolor=$b align=right>$hours[$maxChatMaxH]</td>
+ <td bgcolor=$c align=right>$maxPALMax</td>
+ <td bgcolor=$c align=right>$hours[$maxPALMaxH]</td>
+</tr>
+</table>
+<table border=3>
+<tr>
+ <th colspan=10>Chat/PAL Users</th>
+</tr>
+<tr>
+ <th align=center>&nbsp;</th>
+ <th align=center colspan=3>Min Hourly Statistics</th>
+ <th align=center colspan=3>Average Hourly Statistics</th>
+ <th align=center colspan=3>Max Hourly Statistics</th>
+</tr>
+<tr>
+ <th align=center>Hour</th>
+ <th bgcolor=$a align=center>Combined</th>
+ <th bgcolor=$b align=center>Chat</th>
+ <th bgcolor=$c align=center>PAL</th>
+ <th bgcolor=$a align=center>Combined</th>
+ <th bgcolor=$b align=center>Chat</th>
+ <th bgcolor=$c align=center>PAL</th>
+ <th bgcolor=$a align=center>Combined</th>
+ <th bgcolor=$b align=center>Chat</th>
+ <th bgcolor=$c align=center>PAL</th>
+</tr>
+AVGTBL
+for ( $h = 0; $h < 24; $h++ ){
+
+	print HTML " <tr>\n <td align=right>$hours[$h]</td>\n";
+
+	$bg = ($minCombinedMaxH == $h) ? $hi : $a;
+	$bg = ($minCombinedMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$minCombined[$h]</td>";
+	$bg = ($minChatMaxH == $h) ? $hi : $b;
+	$bg = ($minChatMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$minChat[$h]</td>";
+ 	$bg = ($minPALMaxH == $h) ? $hi : $c;
+	$bg = ($minPALMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$minPAL[$h]</td>\n";
+
+	$bg = ($avgCombinedMaxH == $h) ? $hi : $a;
+	$bg = ($avgCombinedMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$avgCombined[$h]</td>";
+	$bg = ($avgChatMaxH == $h) ? $hi : $b;
+	$bg = ($avgChatMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$avgChat[$h]</td>";
+ 	$bg = ($avgPALMaxH == $h) ? $hi : $c;
+	$bg = ($avgPALMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$avgPAL[$h]</td>\n";
+
+	$bg = ($maxCombinedMaxH == $h) ? $hi : $a;
+	$bg = ($maxCombinedMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$maxCombined[$h]</td>";
+	$bg = ($maxChatMaxH == $h) ? $hi : $b;
+	$bg = ($maxChatMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$maxChat[$h]</td>";
+ 	$bg = ($maxPALMaxH == $h) ? $hi : $c;
+	$bg = ($maxPALMinH == $h) ? $lo : $bg;
+	print HTML " <td align=right bgcolor=$bg>$maxPAL[$h]</td>\n";
+
+	print HTML "</tr>\n";
+}
+print HTML <<FTR;
+</table>
+</font>
+</body>
+</html>
+FTR
+
+unlink $tempsql;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d30 10
+@
+
+
+1.5
+log
+@log dir
+@
+text
+@d306 6
+a311 1
+#$t = $totalChat + $totalPal;1 while $t =~ s/(\d+)(\d\d\d)/$1,$2/;
+@
+
+
+1.4
+log
+@new path names
+@
+text
+@d28 1
+a28 1
+$G_exportdir = '/u/vplaces/scripts/users/';
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d7 1
+d26 4
+a29 3
+$G_isql_exe = '/t/t/s/sybase/bin/isql -Uvpplaces -Pvpplaces -SSYBASE';
+$G_statdir = '/cafe/u/vplaces/scripts/users/';
+$G_exportdir = '/cafe/u/vplaces/scripts/users/';
+a198 1
+
+@
+
+
+1.2
+log
+@fix PDT/PST reporting problem
+@
+text
+@d19 1
+a19 1
+###################
+d21 1
+a21 1
+# Subroutine: query the database for chat/PAL usage
+a22 2
+sub getUsers {
+	my $tempsql = $G_statdir . ".temp.sql.$$";
+d24 8
+a31 3
+	$ENV{'SYBASE'} ||= '/t/t/s/sybase';
+	my $tz = `date "+%Z"`;
+        my $offset = ($tz =~ /DT/) ? -5 : -6;
+d33 6
+a38 5
+	my $sql_cmd =<<"SQLCMD";
+select dateadd(hour,$offset,time),roomUsage+corrUsage,BLUsage from totalUsage
+where time between "$G_start" and "$G_end"
+go
+SQLCMD
+d40 2
+a41 3
+	open (SQL_IN, ">$tempsql") || die "Can't write to $tempsql : $!\n";
+   	print SQL_IN $sql_cmd;
+	close(SQL_IN);
+d43 4
+a46 1
+	open (SQL_OUT, "$G_isql_exe -i $tempsql |") || die "Can't read from $G_isql_exe -i $tempsql : $!\n";
+d48 20
+a67 11
+	my $j;
+	my $h = 0;
+	$maxC = 0;
+	$maxP = 0;
+	$mC = 0;
+	$mP = 0;
+	$minC = 9999999;
+	$minP = 9999999;
+	$totalChat = $totalPal = 0;
+	while (<SQL_OUT>) {
+		last if (/-----/);
+d69 3
+a71 33
+	while (<SQL_OUT>) {
+		next unless (/^\s+[A-Z]/);
+		($j, $j, $j, $t, $c, $p) = split;
+		($hr,$min) = split(/:/,$t);
+		if ($min =~ /PM/) {
+			$hr += 12 if ($hr < 12);
+		} else {
+			$hr -= 12 if ($hr == 12);
+		}
+		$chat{$hr} += $c;
+		$pal{$hr} += $p;
+		$totalChat += $c;
+		$totalPal += $p;
+		$total{$hr} += ($c + $p);
+		$samples{$hr}++;
+		$avgChat{$hr} = $chat{$hr} / $samples{$hr};
+		$avgPal{$hr} = $pal{$hr} / $samples{$hr};
+		$avgTotal{$hr} = $total{$hr} / $samples{$hr};
+		if ($samples{$hr} == 1) {
+			$minChat{$hr} = $c;
+			$maxChat{$hr} = $c;
+			$minPal{$hr} = $p;
+			$maxPal{$hr} = $p;
+		} else {
+			$minChat{$hr} = $c if ($c < $minChat{$hr});
+			$minPal{$hr}  = $p if ($p < $minPal{$hr});
+			$maxChat{$hr} = $c if ($c > $maxChat{$hr});
+			$maxPal{$hr}  = $p if ($p > $maxPal{$hr});
+		}
+		$maxC = $c if ($c > $maxC);
+		$maxP = $p if ($p > $maxP);
+		$minC = $c if ($c < $minC);
+		$minP = $p if ($p < $minP);
+d73 18
+d92 2
+a93 2
+	close(SQL_OUT);
+	unlink $tempsql;
+d95 26
+a120 3
+	for ($i = 0; $i <= 23; $i++) {
+		$mC = $chat{$i} if ($chat{$i} > $mC);
+		$mP = $pal{$i} if ($pal{$i} > $mP);
+d122 21
+d145 2
+a146 7
+####################
+#
+# START HERE
+#
+$G_isql_exe = '/t/t/s/sybase/bin/isql -Uvpplaces -Pvpplaces -SSYBASE';
+$G_statdir = '/cafe/u/vplaces/scripts/users/';
+$G_exportdir = '/cafe/u/vplaces/scripts/users/';
+d148 1
+a148 8
+$TZ = `date "+%Z"`;
+$offset = ($TZ =~ "DT") ? 5 : 6;	# offset from GMT
+$s = 12 - $offset;
+$OPT_date = &ParseDate("yesterday $s:00");
+($G_date, $out) = &UnixDate($OPT_date, '%F', '%Q');
+$G_start = &UnixDate($OPT_date, '%d %b %Y %H:%M');
+$OPT_date = &ParseDate("today $offset:00");
+$G_end = &UnixDate($OPT_date, '%d %b %Y %H:%M');
+d150 3
+a152 1
+&getUsers;
+d154 3
+d158 40
+d199 5
+d205 3
+a207 10
+open (OUT, ">$outfn") || die "Can't write to $outfn : $!";
+
+$pc = $maxC;1 while $pc =~ s/(\d+)(\d\d\d)/$1,$2/;
+$pp = $maxP;1 while $pp =~ s/(\d+)(\d\d\d)/$1,$2/;
+$mmc = $totalChat;1 while $mmc =~ s/(\d+)(\d\d\d)/$1,$2/;
+$mmp = $totalPal;1 while $mmp =~ s/(\d+)(\d\d\d)/$1,$2/;
+$t = $totalChat + $totalPal;1 while $t =~ s/(\d+)(\d\d\d)/$1,$2/;
+$y = int((($totalChat + $totalPal)/(60*24*365))*100)/100;
+
+print OUT qq|<html>
+d218 1
+d220 25
+a244 9
+  <b>Report Date:</b> $G_date Central Standard Time
+<p>
+<table border=2 cellspacing=4 cellpadding=4>
+<tr><th>Peak Chat Users</th><td bgcolor="#ffcc88" align=right>$pc</td></tr>
+<tr><th>Peak PAL Users</th><td bgcolor="#ffcc88" align=right>$pp</td></tr>
+<tr><th>Total Chat Minutes</th><td bgcolor="#ffcc88" align=right>$mmc</td></tr>
+<tr><th>Total PAL Minutes</th><td bgcolor="#ffcc88" align=right>$mmp</td></tr>
+<tr><th>Grand Total Minutes</th><td bgcolor="#ffcc88" align=right>$t</td></tr>
+<tr><th>Grand Total Years</th><td bgcolor="#ffcc88" align=right>$y</td></tr>
+d246 1
+a246 2
+<p>
+<table border=2 cellspacing=4 cellpadding=4>
+d248 1
+a248 4
+  <th rowspan=2>Hour</th>
+  <th colspan=4>Chat</th>
+  <th colspan=4>PAL</th>
+  <th colspan=2>Total</th>
+d251 4
+a254 10
+  <th>Max Users</th>
+  <th>Min Users</th>
+  <th>Minutes</th>
+  <th>Avg Users</th>
+  <th>Max Users</th>
+  <th>Min Users</th>
+  <th>Minutes</th>
+  <th>Avg Users</th>
+  <th>Minutes</th>
+  <th>Avg Users</th>
+a255 25
+|;
+
+for ($i = 0; $i <= 23; $i++) {
+	$a1 = int($avgChat{$i});
+	$a2 = int($avgPal{$i});
+	$a3 = int($avgTotal{$i});
+	$maxCbg = ($maxChat{$i} == $maxC) ? "#88ff88" : "#ddddff";
+	$maxPbg = ($maxPal{$i} == $maxP) ? "#88ff88" : "#ddddff";
+	$minCbg = ($minChat{$i} == $minC) ? "#ff8888" : "#ffdd99";
+	$minPbg = ($minPal{$i} == $minP) ? "#ff8888" : "#ffdd99";
+	$mCbg = ($chat{$i} == $mC) ? "#88ff88" : "#ffcccc";
+	$mPbg = ($pal{$i} == $mP) ? "#88ff88" : "#ffcccc";
+	$Tbg = "#ffcccc";
+	$minutes = $chat{$i} + $pal{$i};
+	1 while $maxChat{$i} =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $minChat{$i} =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $maxPal{$i} =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $minPal{$i} =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $chat{$i} =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $pal{$i} =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $a1 =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $a2 =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $a3 =~ s/(\d+)(\d\d\d)/$1,$2/;
+	1 while $minutes =~ s/(\d+)(\d\d\d)/$1,$2/;
+	print OUT <<ROW;
+d257 10
+a266 11
+<td align=center>$i</td>
+<td align=right bgcolor=$maxCbg>$maxChat{$i}</td>
+<td align=right bgcolor=$minCbg>$minChat{$i}</td>
+<td align=right bgcolor=$mCbg>$chat{$i}</td>
+<td align=right>$a1</td>
+<td align=right bgcolor=$maxPbg>$maxPal{$i}</td>
+<td align=right bgcolor=$minPbg>$minPal{$i}</td>
+<td align=right bgcolor=$mPbg>$pal{$i}</td>
+<td align=right>$a2</td>
+<td align=right bgcolor=$Tbg>$minutes</td>
+<td align=right>$a3</td>
+d268 36
+a303 1
+ROW
+d305 3
+a307 8
+print OUT qq!</table>
+<hr size=5>
+<center><font size=-1>[ <a href="index.html">Daily Index</a> ] </font></center>
+<hr>
+</body>
+</html>
+!;
+close OUT;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d27 2
+d31 1
+a31 1
+select dateadd(hour,-6,time),roomUsage+corrUsage,BLUsage from totalUsage
+@

@@ -1,0 +1,26 @@
+#!/usr/bin/ksh
+
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE << + > /u/vplaces/scripts/sybscripts/permissions.out
+
+use audset 
+go
+sp_changedbowner audset, true
+go
+
+use vpplaces
+go
+sp_changedbowner vpplaces, true
+go
+
+use vpusers
+go
+sp_changedbowner vpusr, true
+go
+
+use master
+go
+exec sp_role 'grant','sa_role','audset'
+go
+
++
+

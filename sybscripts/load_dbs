@@ -1,0 +1,43 @@
+#!/usr/bin/ksh
+
+HOST=`hostname`
+FILECOUNT=`ls /u/vplaces/s/sybase/db/backup/*full*.0 | wc -l`
+ERRCOUNT=`cat /u/vplaces/scripts/sybscripts/dbcc_updstats.out | grep Msg | wc -l`
+if [ $ERRCOUNT != 0 ]
+  then
+   /usr/bin/mailx -s "DBCCs indicated problem with DB, no load done on $HOST" vplaces@halsoft.com
+  else
+if [ $FILECOUNT = 3 ]
+  then
+/u/vplaces/VPCOM/stop_vpcom > /u/vplaces/scripts/sybscripts/load_dbs.out
+
+
+/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE << + >> /u/vplaces/scripts/sybscripts/load_dbs.out
+use master 
+go
+load database audset from "/u/vplaces/s/sybase/db/backup/audset.full.backupSet.0"
+go
+online database audset
+go
+load database vpplaces from "/u/vplaces/s/sybase/db/backup/vpplaces.full.backupSet.0"
+go
+online database vpplaces
+go
+load database vpusers from "/u/vplaces/s/sybase/db/backup/vpusers.full.backupSet.0"
+go
+online database vpusers
+go
++
+  
+#/u/vplaces/VPCOM/start_vpcom >> /u/vplaces/scripts/sybscripts/load_dbs.out
+
+  else
+     echo > /u/vplaces/scripts/sybscripts/load_dbs.out
+     echo >> /u/vplaces/scripts/sybscripts/load_dbs.out
+     echo "ALL THE BACKUP FILES ARE NOT PRESENT SO NONE WERE LOADED" >> /u/vplaces/scripts/sybscripts/load_dbs.out
+     echo "Check your scripts to determine why the file transfer failed" >> /u/vplaces/scripts/sybscripts/load_dbs.out
+     echo >> /u/vplaces/scripts/sybscripts/load_dbs.out
+     echo >> /u/vplaces/scripts/sybscripts/load_dbs.out
+     /bin/mailx -s "Problem with DB load on $HOST" < /u/vplaces/scripts/sybscripts/load_dbs.out vplaces@halsoft.com
+fi
+fi

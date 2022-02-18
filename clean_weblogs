@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# first remove local access and error logs older than 3 months (180 days)
+
+if [ -d /export/home/logs ]; then
+ cd /export/home/logs && /usr/local/bin/find /export/home/logs \( -name "errors.*" -o -name "covalent_cipher_log.*" -o -name "access.*" \) -a ! -mtime -180 | /usr/local/bin/xargs -l /bin/echo
+fi
+
+# first remove access in oldlogs that ore lder than 3 years (1095 days)
+if [ -d /export/u03/oldlogs ]; then
+ cd /export/u03/oldlogs && /usr/local/bin/find /export/u03/oldlogs -type f -a ! -mtime -1095 -name "access*" | /usr/local/bin/xargs -l /bin/echo
+fi
+

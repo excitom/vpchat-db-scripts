@@ -1,0 +1,51 @@
+
+		PIX log analysis - Tue Apr 20 11:05:44 2004
+
+Start:	Apr 20 00:00:05
+End:	Apr 20 05:00:39
+
+Rank    IP address        Denials        Host name (if found)
+
+Attackers (Top  25):
+    1. 210.203.207.240      849812  ppp5066.hakata02.bbiq.jp
+    2. 218.40.236.129       722906  ppp0637.hakata02.bbiq.jp
+    3. 218.40.238.129       459592  ppp0129.hakata02.bbiq.jp
+    4. 202.226.242.74       316922  ppp1852.hakata02.bbiq.jp
+    5. 219.110.187.32        65220  h219-110-187-032.catv02.itscom.jp
+    6. 138.23.191.86          9817  batch4105b.ucr.edu
+    7. 192.168.2.1            2378
+    8. 218.234.130.14         1943
+    9. 192.188.16.4           1060  robin
+   10. 207.228.126.170         647
+   11. 218.40.236.144          539  ppp0652.hakata02.bbiq.jp
+   12. 210.203.208.15          444  ppp5095.hakata02.bbiq.jp
+   13. 192.168.100.50          436  anne
+   14. 204.174.223.28          350  redirect.domainpeople.com
+   15. 69.40.85.75             309  h75.85.40.69.ip.alltel.net
+   16. 210.203.208.35          252  ppp5115.hakata02.bbiq.jp
+   17. 218.40.238.141          252  ppp0141.hakata02.bbiq.jp
+   18. 216.65.186.111          243  C03-111.netonecom.net
+   19. 63.165.144.213          182
+   20. 66.219.40.14            182  aus-line-01-s1-0-7-1.customer.corenap.com
+   21. 209.40.127.220          135
+   22. 218.40.236.160          119  ppp0668.hakata02.bbiq.jp
+   23. 208.145.175.53           93
+   24. 199.182.12.173           66  dsc02-sdv-ca-199-182-12-173.rasserver.net
+   25. 166.102.82.44            62  h44.82.102.166.ip.alltel.net
+
+Targets:
+    1. 66.45.126.54        2417101  chat.vpadult.com
+    2. 66.45.126.53           2041  chat.vpchat.com
+    3. 66.45.126.62           1692  chattool.vpchat.com
+    4. 66.45.126.57            727  mail2.halsoft.com
+    5. 66.45.126.52            418  members.vpchat.com
+    6. 66.45.126.49            325  kenny.halsoft.com
+    7. 66.45.126.61            173  reg.vpchat.com
+    8. 66.45.126.48            149  halsoft-noc.halsoft.com
+    9. 66.45.126.51            102  frumpy.halsoft.com
+   10. 66.45.126.55             97  talk.excite.co.jp
+   11. 66.45.126.63             95
+   12. 66.45.126.60             90  scissors.halsoft.com
+   13. 66.45.126.58             85  download.vpchat.com
+   14. 66.45.126.59             76  paper.halsoft.com
+   15. 66.45.126.56             70  chatjp.excite.co.jp

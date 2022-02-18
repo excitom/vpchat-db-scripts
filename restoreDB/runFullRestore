@@ -1,0 +1,254 @@
+#!/usr/bin/perl
+#
+# Restore database files
+#
+# NOTE: This is an interactive program. It's not a good idea to
+#	automatically restore things without explicit operator intervention.
+#
+# Tom Lang 7/1999
+#
+
+#############################
+#
+# Subroutine: restore stored procedures
+#
+sub restoreSTP () {
+	my $db = $_[0];
+	my $script = "/u/vplaces/scripts/stp/update_" . $db . ".pl";
+	system $script;
+}
+
+#############################
+#
+# Subroutine: restore full dump and any transaction dumps
+#
+sub restore () {
+	my $db = $_[0];
+	my $dbFile = $_[1];
+	my $scriptFile = "/tmp/tx_backup_$db.$$";
+	my (@tx, %tx, $t);
+
+	#
+	# restore the full dump
+	#
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	print SQL <<CMD;
+load database $db from "$dbFile"
+go
+CMD
+	close SQL;
+	print "\n\nRestoring $dbFile \n";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	
+	#
+	# find existing transaction dumps for this DB
+	#
+	opendir(D, $backupDir) || die "Can't read $backupDir : $!";
+	@tx = grep /$db.tx.backupSet.\d+$/, readdir D;
+
+	#
+	# sort in ascending order of age
+	#
+	foreach $t (@tx) {
+		my @s = stat $backupDir . "/" . $t;
+		$tx{$t} = $s[9];
+	}
+	foreach $t (sort {$tx{$a} <=> $tx{$b}} keys %tx) {
+		print "-- restoring transaction dump $t\n";
+		open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+		print SQL <<CMD;
+load tran $db from "/u/vplaces/s/sybase/db/backup/$t"
+go
+CMD
+		close SQL;
+		system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+		
+	}
+	#
+	# bring database back online
+	#
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	print SQL <<CMD;
+online database $db
+go
+CMD
+	close SQL;
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	unlink $scriptFile;
+}
+
+#############################
+#
+# Subroutine: restore database logins
+#
+sub restoreLogins () {
+	my $scriptFile = "/tmp/tx_backup_$db.$$";
+	
+	#
+	# drop current logins
+	#
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	print SQL <<CMD;
+SELECT "EXEC sp_dropuser " + name
+  FROM sysusers
+  WHERE (suid>1) AND (uid>1)
+PRINT "GO"
+GO
+CMD
+	close SQL;
+	print "\n\Dropping DB users\n";
+	open(S, "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile | ") || die "Can't run $scriptFile : $!";
+	my @lines = <S>;
+	close S;
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	foreach $_ (@s) {
+		print SQL unless(/\(/);
+	}
+	close SQL;
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+
+	#
+	# create user logins
+	#
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	print SQL <<CMD;
+use master
+go
+EXEC sp_addlogin vpusr, "vpusr1"
+EXEC sp_addlogin vpplaces, "vpplaces"
+EXEC sp_addlogin audset, "audset"
+EXEC sp_addlogin vpperm,"chars6"
+EXEC sp_role "grant", sa_role, vpperm
+EXEC sp_role "grant", sso_role, vpperm
+EXEC sp_role "grant", oper_role, vpperm
+go
+CMD
+	close SQL;
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	
+	unlink $scriptFile;
+}
+
+#############################
+#
+# Subroutine: restore database permissions
+#
+sub restorePrivs () {
+	my $scriptFile = "/tmp/tx_backup_$db.$$";
+	
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	print SQL <<CMD;
+use master
+go
+sp_dboption audset,"abort tran on log full",TRUE
+GO
+sp_dboption vpusers,"abort tran on log full",TRUE
+GO
+sp_dboption vpplaces,"abort tran on log full",TRUE
+GO
+
+use audset
+GO
+sp_changedbowner audset, TRUE
+checkpoint
+GO
+sp_modifylogin audset, defdb, audset
+GO
+
+use vpusers
+GO
+sp_changedbowner vpusr, TRUE
+checkpoint
+GO
+sp_modifylogin vpusr, defdb, vpusers
+GO
+
+EXEC sp_adduser vpplaces, vpplaces
+EXEC sp_adduser audset, audset
+GRANT SELECT ON getGMT TO PUBLIC
+GRANT SELECT ON configurationKeys TO PUBLIC
+GRANT EXECUTE ON getConfiguration TO PUBLIC
+GRANT EXECUTE ON isRegistered TO PUBLIC
+GRANT EXECUTE ON isPrivileged TO PUBLIC
+GO
+
+use vpplaces
+GO
+sp_changedbowner vpplaces, TRUE
+checkpoint
+GO
+sp_modifylogin vpplaces, defdb, vpplaces
+GO
+
+EXEC sp_adduser vpusr
+go
+EXEC sp_adduser audset
+go
+
+GRANT EXECUTE ON getPPlacesChanges TO vpusr
+go
+GRANT EXECUTE ON getPPlaces TO vpusr
+go
+GRANT EXECUTE ON delPPlace TO vpusr
+go
+GRANT EXECUTE ON updatePPlace TO vpusr
+go
+
+GRANT EXECUTE ON addPersistentPlace TO audset
+go
+GRANT EXECUTE ON delPersistentPlace TO audset
+go
+GRANT EXECUTE ON persistentPlaceExists TO audset
+go
+CMD
+	close SQL;
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	
+	unlink $scriptFile;
+}
+
+############################
+# 
+# START HERE
+#
+$ENV{'SYBASE'} ||= '/u/vplaces/s/sybase';
+$backupDir = $ENV{'SYBASE'} . '/db/backup';
+$| = 1;
+foreach $db ('audset', 'vpplaces', 'vpusers') {
+   print "Restore $db ? [n] ";
+   $_ = <STDIN>;
+   if (/[Yy]/) {
+      $dbf = "";
+      foreach $i (0 .. 2) {
+         $file = $backupDir . "/" . $db . ".full.backupSet.$i";
+         if (-f $file) {
+            if ($dbf eq "") {
+               $dbf = $file;
+            }
+            else {
+               @s1 = stat $file;
+               @s2 = stat $dbf;
+               $dbf = $file if ($s1[9] > $s2[9]);
+            }
+         }
+      }
+      if ($dbf eq "") {
+         print "No full backups found for $db ! \n";
+      } else {
+         @s = stat $dbf;
+         $ts = localtime($s[9]);
+         print "Newest file is $dbf\n$ts\nrestore it? [n] ";
+         $_ = <STDIN>;
+         if (/[Yy]/) {
+            &restore ($db, $dbf);
+	    &restoreSTP ($db);
+         }
+      }
+   }
+}
+print "Restore privs and users? [n] ";
+$_ = <STDIN>;
+if (/[Yy]/) {
+	&restoreLogins;
+	&restorePrivs;
+}

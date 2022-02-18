@@ -1,0 +1,18 @@
+CREATE PROC months ( @accountID userIdentifier )
+AS
+BEGIN
+  DECLARE @created VpTime
+  DECLARE @last VpTime
+  DECLARE @months integer
+  SELECT @created = creationDate, @last = lastUpdated 
+    FROM userAccounts WHERE accountID = @accountID
+  SELECT @months = datediff(month, @created, @last)
+  IF @months = NULL
+  BEGIN
+    SELECT @months = 0
+  END
+  UPDATE renewals SET months = @months
+    WHERE accountID = @accountID
+  SELECT 'Account ',@accountID, ' Months ', @months
+END
+GO

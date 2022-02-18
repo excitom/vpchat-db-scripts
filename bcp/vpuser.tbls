@@ -1,0 +1,35 @@
+#
+# '1' flag indicates 'identiy' function, IDs need to be restored
+#
+users	1
+creditCards	1
+echecks	1
+heldPayments	1
+payments.tbl	1
+referralHistory	1
+reminders	1
+warnings	1
+accountActivity
+accountBalance
+accountChanges
+badCredit
+bannedNames
+ccPayments
+configurationKeys
+deadNames
+history
+passwordChanges
+penalties
+penaltyTypes
+pendingAcctChanges
+privilegeDomains
+privilegeTypes
+referralPrefs
+referrals
+registration
+renewals
+runningBalance
+subscriptions
+userAccounts
+userDetails
+userPrivileges

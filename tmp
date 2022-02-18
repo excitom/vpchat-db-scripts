@@ -1,0 +1,1202 @@
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (940, 1, '', '', '', '')
+UPDATE payments SET comment = "7X305909R3285523X" WHERE paymentID = 941
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (941, 1, '', '', '', '')
+UPDATE payments SET comment = "5UL94844DS157004K" WHERE paymentID = 942
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (942, 1, '', '', '', '')
+UPDATE payments SET comment = "41J87534JC529405R" WHERE paymentID = 943
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (943, 1, '', '', '', '')
+UPDATE payments SET comment = "6D7420754A7274251" WHERE paymentID = 944
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (944, 1, '', '', '', '')
+UPDATE payments SET comment = "6G873827FA053964Y" WHERE paymentID = 945
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (945, 1, '', '', '', '')
+UPDATE payments SET comment = "1M181535V5635472G" WHERE paymentID = 946
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (946, 1, '', '', '', '')
+UPDATE payments SET comment = "5WG576925H198963Y" WHERE paymentID = 947
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (947, 1, '', '', '', '')
+UPDATE payments SET comment = "3R3762494W8277626" WHERE paymentID = 949
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (949, 1, '', '', '', '')
+UPDATE payments SET comment = "4KU95309G1683214J" WHERE paymentID = 950
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (950, 1, '', '', '', '')
+UPDATE payments SET comment = "4WB212114G459552D" WHERE paymentID = 951
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (951, 1, '', '', '', '')
+UPDATE payments SET comment = "4RB866550E040823Y" WHERE paymentID = 952
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (952, 1, '', '', '', '')
+UPDATE payments SET comment = "80190185RC664031T" WHERE paymentID = 953
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (953, 1, '', '', '', '')
+UPDATE payments SET comment = "5XN29464GB5047809" WHERE paymentID = 954
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (954, 1, '', '', '', '')
+UPDATE payments SET comment = "28F55534K9982293X" WHERE paymentID = 955
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (955, 1, '', '', '', '')
+UPDATE payments SET comment = "6V466400CU0929816" WHERE paymentID = 956
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (956, 1, '', '', '', '')
+UPDATE payments SET comment = "3EL12020N7278113G" WHERE paymentID = 957
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (957, 1, '', '', '', '')
+UPDATE payments SET comment = "4C187637EK3344601" WHERE paymentID = 958
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (958, 1, '', '', '', '')
+UPDATE payments SET comment = "9YL91174L2230270C" WHERE paymentID = 959
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (959, 1, '', '', '', '')
+UPDATE payments SET comment = "29V897643F1639733" WHERE paymentID = 960
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (960, 1, '', '', '', '')
+UPDATE payments SET comment = "4T5719391K7790343" WHERE paymentID = 961
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (961, 1, '', '', '', '')
+UPDATE payments SET comment = "7E858071A7209262H" WHERE paymentID = 962
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (962, 1, '', '', '', '')
+UPDATE payments SET comment = "6V908293HS174744W" WHERE paymentID = 963
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (963, 1, '', '', '', '')
+UPDATE payments SET comment = "1S45417362232915G" WHERE paymentID = 964
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (964, 1, '', '', '', '')
+UPDATE payments SET comment = "8N523734DJ079263U" WHERE paymentID = 970
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (970, 1, '', '', '', '')
+UPDATE payments SET comment = "5M833325V57560821" WHERE paymentID = 972
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (972, 1, '', '', '', '')
+UPDATE payments SET comment = "34A779973J991182R" WHERE paymentID = 973
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (973, 1, '', '', '', '')
+UPDATE payments SET comment = "4SW82249K61070302" WHERE paymentID = 974
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (974, 1, '', '', '', '')
+UPDATE payments SET comment = "5WD24041A09264527" WHERE paymentID = 975
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (975, 1, '', '', '', '')
+UPDATE payments SET comment = "75J4971849951114C" WHERE paymentID = 976
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (976, 1, '', '', '', '')
+UPDATE payments SET comment = "5GS36630AH6813304" WHERE paymentID = 977
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (977, 1, '', '', '', '')
+UPDATE payments SET comment = "76779199UH954350P" WHERE paymentID = 978
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (978, 1, '', '', '', '')
+UPDATE payments SET comment = "9BJ16446WJ5716222" WHERE paymentID = 979
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (979, 1, '', '', '', '')
+UPDATE payments SET comment = "6MU50914ET7351545" WHERE paymentID = 980
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (980, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "3L92537844599394X" WHERE paymentID = 981
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (981, 1, '', '', '', '')
+UPDATE payments SET comment = "06P34028RK1611543" WHERE paymentID = 982
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (982, 1, '', '', '', '')
+UPDATE payments SET comment = "68T88670JU944362G" WHERE paymentID = 983
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (983, 1, '', '', '', '')
+UPDATE payments SET comment = "0EB78254W50803316" WHERE paymentID = 984
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (984, 1, '', '', '', '')
+UPDATE payments SET comment = "40T855928B419921T" WHERE paymentID = 985
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (985, 1, '', '', '', '')
+UPDATE payments SET comment = "5Y9729225P638874K" WHERE paymentID = 986
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (986, 1, '', '', '', '')
+UPDATE payments SET comment = "3D041390XW736012E" WHERE paymentID = 987
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (987, 1, '', '', '', '')
+UPDATE payments SET comment = "9EE5594217962152H" WHERE paymentID = 988
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (988, 1, '', '', '', '')
+UPDATE payments SET comment = "3F41586575937844X" WHERE paymentID = 989
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (989, 1, '', '', '', '')
+UPDATE payments SET comment = "9X322441T91269828" WHERE paymentID = 990
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (990, 1, '', '', '', '')
+UPDATE payments SET comment = "5E240224W12319324" WHERE paymentID = 991
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (991, 1, '', '', '', '')
+UPDATE payments SET comment = "03D39109TY2099805" WHERE paymentID = 992
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (992, 1, '', '', '', '')
+UPDATE payments SET comment = "5VU24002BE7985426" WHERE paymentID = 993
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (993, 1, '', '', '', '')
+UPDATE payments SET comment = "0NJ34902RB365252V" WHERE paymentID = 994
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (994, 1, '', '', '', '')
+UPDATE payments SET comment = "9SM950785L9174607" WHERE paymentID = 995
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (995, 1, '', '', '', '')
+UPDATE payments SET comment = "77J97667Y17596646" WHERE paymentID = 996
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (996, 1, '', '', '', '')
+UPDATE payments SET comment = "96S421564D034670E" WHERE paymentID = 997
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (997, 1, '', '', '', '')
+UPDATE payments SET comment = "0PE678187X1895307" WHERE paymentID = 998
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (998, 1, '', '', '', '')
+UPDATE payments SET comment = "4M114174J07853204" WHERE paymentID = 999
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (999, 1, '', '', '', '')
+UPDATE payments SET comment = "9T0864576S625154R" WHERE paymentID = 1008
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1008, 1, '', '', '', '')
+UPDATE payments SET comment = "59T27793AK523170B" WHERE paymentID = 1009
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1009, 1, '', '', '', '')
+UPDATE payments SET comment = "89D72605HV274574V" WHERE paymentID = 1010
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1010, 1, '', '', '', '')
+UPDATE payments SET comment = "95H13779HP299941U" WHERE paymentID = 1011
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1011, 1, '', '', '', '')
+UPDATE payments SET comment = "99W955359N803884H" WHERE paymentID = 1012
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1012, 1, '', '', '', '')
+UPDATE payments SET comment = "8C799720KX3542408" WHERE paymentID = 1013
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1013, 1, '', '', '', '')
+UPDATE payments SET comment = "5ED43083D23995606" WHERE paymentID = 1014
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1014, 1, '', '', '', '')
+UPDATE payments SET comment = "2PN11495K8150994J" WHERE paymentID = 1015
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1015, 1, '', '', '', '')
+UPDATE payments SET comment = "7FK86098W96986744" WHERE paymentID = 1016
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1016, 1, '', '', '', '')
+UPDATE payments SET comment = "5JE459655N0350801" WHERE paymentID = 1017
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1017, 1, '', '', '', '')
+UPDATE payments SET comment = "3LN42736R1451953B" WHERE paymentID = 1018
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1018, 1, '', '', '', '')
+UPDATE payments SET comment = "34G05866B67543836" WHERE paymentID = 1029
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1029, 1, '', '', '', '')
+UPDATE payments SET comment = "11K12277MU854082F" WHERE paymentID = 1030
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1030, 1, '', '', '', '')
+UPDATE payments SET comment = "2GM24963YP328002G" WHERE paymentID = 1031
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1031, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "32F11629548420534" WHERE paymentID = 1032
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1032, 1, '', '', '', '')
+UPDATE payments SET comment = "46758485C9774572R" WHERE paymentID = 1033
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1033, 1, '', '', '', '')
+UPDATE payments SET comment = "57D89464PF982480M" WHERE paymentID = 1034
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1034, 1, '', '', '', '')
+UPDATE payments SET comment = "3VR54151D1661834J" WHERE paymentID = 1035
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1035, 1, '', '', '', '')
+UPDATE payments SET comment = "8WJ04623AT769260E" WHERE paymentID = 1036
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1036, 1, '', '', '', '')
+UPDATE payments SET comment = "3G131769LS9164055" WHERE paymentID = 1037
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1037, 1, '', '', '', '')
+UPDATE payments SET comment = "66V49220C50495309" WHERE paymentID = 1038
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1038, 1, '', '', '', '')
+UPDATE payments SET comment = "5LP76168SS559660R" WHERE paymentID = 1039
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1039, 1, '', '', '', '')
+UPDATE payments SET comment = "9BT5688111822264T" WHERE paymentID = 1040
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1040, 1, '', '', '', '')
+UPDATE payments SET comment = "0D756141BW545693X" WHERE paymentID = 1041
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1041, 1, '', '', '', '')
+UPDATE payments SET comment = "3BC13491SU7501612" WHERE paymentID = 1042
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1042, 1, '', '', '', '')
+UPDATE payments SET comment = "9WK25290G2638835P" WHERE paymentID = 1043
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1043, 1, '', '', '', '')
+UPDATE payments SET comment = "84764237U02205241" WHERE paymentID = 1044
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1044, 1, '', '', '', '')
+UPDATE payments SET comment = "9FC741808A371802M" WHERE paymentID = 1054
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1054, 1, '', '', '', '')
+UPDATE payments SET comment = "8S292245E11435341" WHERE paymentID = 1055
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1055, 1, '', '', '', '')
+UPDATE payments SET comment = "2WU96030AH837800N" WHERE paymentID = 1056
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1056, 1, '', '', '', '')
+UPDATE payments SET comment = "4VN19923NM1762014" WHERE paymentID = 1057
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1057, 1, '', '', '', '')
+UPDATE payments SET comment = "0GJ11872968878710" WHERE paymentID = 1058
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1058, 1, '', '', '', '')
+UPDATE payments SET comment = "2LF79305S44842139" WHERE paymentID = 1059
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1059, 1, '', '', '', '')
+UPDATE payments SET comment = "3J06804797109530N" WHERE paymentID = 1060
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1060, 1, '', '', '', '')
+UPDATE payments SET comment = "8C6546678F778143V" WHERE paymentID = 1061
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1061, 1, '', '', '', '')
+UPDATE payments SET comment = "2LF282337U423450E" WHERE paymentID = 1062
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1062, 1, '', '', '', '')
+UPDATE payments SET comment = "0PS592377H495003G" WHERE paymentID = 1063
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1063, 1, '', '', '', '')
+UPDATE payments SET comment = "8UX989944N9496456" WHERE paymentID = 1064
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1064, 1, '', '', '', '')
+UPDATE payments SET comment = "41F83500BF217632N" WHERE paymentID = 1065
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1065, 1, '', '', '', '')
+UPDATE payments SET comment = "3D703531FC022970F" WHERE paymentID = 1068
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1068, 1, '', '', '', '')
+UPDATE payments SET comment = "1XF760120R394223S" WHERE paymentID = 1069
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1069, 1, '', '', '', '')
+UPDATE payments SET comment = "56041200RX679904V" WHERE paymentID = 1070
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1070, 1, '', '', '', '')
+UPDATE payments SET comment = "9AD96402DB146425G" WHERE paymentID = 1071
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1071, 1, '', '', '', '')
+UPDATE payments SET comment = "2CK44012HS9590821" WHERE paymentID = 1072
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1072, 1, '', '', '', '')
+UPDATE payments SET comment = "6GX11182UX367193R" WHERE paymentID = 1073
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1073, 1, '', '', '', '')
+UPDATE payments SET comment = "5UY21639JX982080K" WHERE paymentID = 1074
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1074, 1, '', '', '', '')
+UPDATE payments SET comment = "51D56152C7900802G" WHERE paymentID = 1075
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1075, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "9NY59793J22596047" WHERE paymentID = 1076
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1076, 1, '', '', '', '')
+UPDATE payments SET comment = "4S18139167503391G" WHERE paymentID = 1077
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1077, 1, '', '', '', '')
+UPDATE payments SET comment = "99L84667FM110891R" WHERE paymentID = 1083
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1083, 1, '', '', '', '')
+UPDATE payments SET comment = "2F153674GT8946412" WHERE paymentID = 1095
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1095, 1, '', '', '', '')
+UPDATE payments SET comment = "8LB97127V15258923" WHERE paymentID = 1096
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1096, 1, '', '', '', '')
+UPDATE payments SET comment = "8BD310878A703754T" WHERE paymentID = 1097
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1097, 1, '', '', '', '')
+UPDATE payments SET comment = "5K285510B5585645U" WHERE paymentID = 1098
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1098, 1, '', '', '', '')
+UPDATE payments SET comment = "2L201661HJ285403S" WHERE paymentID = 1099
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1099, 1, '', '', '', '')
+UPDATE payments SET comment = "2PX67285H5574151A" WHERE paymentID = 1100
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1100, 1, '', '', '', '')
+UPDATE payments SET comment = "7NX96366EY4162714" WHERE paymentID = 1103
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1103, 1, '', '', '', '')
+UPDATE payments SET comment = "8NF77735RP8399100" WHERE paymentID = 1104
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1104, 1, '', '', '', '')
+UPDATE payments SET comment = "274280311P474232A" WHERE paymentID = 1105
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1105, 1, '', '', '', '')
+UPDATE payments SET comment = "6S011023CY6688824" WHERE paymentID = 1106
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1106, 1, '', '', '', '')
+UPDATE payments SET comment = "9LN30892GH568162E" WHERE paymentID = 1107
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1107, 1, '', '', '', '')
+UPDATE payments SET comment = "0KH59552CV6604932" WHERE paymentID = 1108
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1108, 1, '', '', '', '')
+UPDATE payments SET comment = "2MG12546J5265964U" WHERE paymentID = 1109
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1109, 1, '', '', '', '')
+UPDATE payments SET comment = "0Y000888RB312991R" WHERE paymentID = 1110
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1110, 1, '', '', '', '')
+UPDATE payments SET comment = "1H172386WS796322F" WHERE paymentID = 1111
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1111, 1, '', '', '', '')
+UPDATE payments SET comment = "81523423DP602444C" WHERE paymentID = 1112
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1112, 1, '', '', '', '')
+UPDATE payments SET comment = "09N379629H691742U" WHERE paymentID = 1113
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1113, 1, '', '', '', '')
+UPDATE payments SET comment = "1NR190665D1149732" WHERE paymentID = 1114
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1114, 1, '', '', '', '')
+UPDATE payments SET comment = "1CY143794X7790825" WHERE paymentID = 1115
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1115, 1, '', '', '', '')
+UPDATE payments SET comment = "5RG31528WY939453C" WHERE paymentID = 1116
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1116, 1, '', '', '', '')
+UPDATE payments SET comment = "04D21796A84745905" WHERE paymentID = 1117
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1117, 1, '', '', '', '')
+UPDATE payments SET comment = "4RS709804D054794K" WHERE paymentID = 1133
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1133, 1, '', '', '', '')
+UPDATE payments SET comment = "4U7351022H877411U" WHERE paymentID = 1142
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1142, 1, '', '', '', '')
+UPDATE payments SET comment = "4WK571804H838103P" WHERE paymentID = 1143
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1143, 1, '', '', '', '')
+UPDATE payments SET comment = "8BH71268H4936941U" WHERE paymentID = 1144
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1144, 1, '', '', '', '')
+UPDATE payments SET comment = "9AD593335U806453S" WHERE paymentID = 1145
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1145, 1, '', '', '', '')
+UPDATE payments SET comment = "4J442298BL962980D" WHERE paymentID = 1147
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1147, 1, '', '', '', '')
+UPDATE payments SET comment = "9YK80980LP2092720" WHERE paymentID = 1148
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1148, 1, '', '', '', '')
+UPDATE payments SET comment = "2V562798EV246250N" WHERE paymentID = 1149
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1149, 1, '', '', '', '')
+UPDATE payments SET comment = "89J17188CY3343019" WHERE paymentID = 1150
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1150, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "9BJ16446WJ5716222" WHERE paymentID = 1151
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1151, 1, '', '', '', '')
+UPDATE payments SET comment = "4WB212114G459552D" WHERE paymentID = 1152
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1152, 1, '', '', '', '')
+UPDATE payments SET comment = "51Y68670A4891045Y" WHERE paymentID = 1153
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1153, 1, '', '', '', '')
+UPDATE payments SET comment = "9TD752373A325141X" WHERE paymentID = 1154
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1154, 1, '', '', '', '')
+UPDATE payments SET comment = "8UN13456GV150211P" WHERE paymentID = 1155
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1155, 1, '', '', '', '')
+UPDATE payments SET comment = "5FH65897D82707244" WHERE paymentID = 1156
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (1156, 1, '', '', '', '')
+UPDATE payments SET comment = "2W551933HU392092A" WHERE paymentID = 51039
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51039, 1, '', '', '', '')
+UPDATE payments SET comment = "8X192392X2952514C" WHERE paymentID = 51040
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51040, 1, '', '', '', '')
+UPDATE payments SET comment = "2LB754147Y550913D" WHERE paymentID = 51041
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51041, 1, '', '', '', '')
+UPDATE payments SET comment = "2XX854850E196950A" WHERE paymentID = 51042
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51042, 1, '', '', '', '')
+UPDATE payments SET comment = "5E5439249D721444G" WHERE paymentID = 51043
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51043, 1, '', '', '', '')
+UPDATE payments SET comment = "0RS23517KM713711E" WHERE paymentID = 51044
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51044, 1, '', '', '', '')
+UPDATE payments SET comment = "65S13846DJ2488315" WHERE paymentID = 51045
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51045, 1, '', '', '', '')
+UPDATE payments SET comment = "6G306966TJ813462G" WHERE paymentID = 51046
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51046, 1, '', '', '', '')
+UPDATE payments SET comment = "22T1492134385064A" WHERE paymentID = 51047
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51047, 1, '', '', '', '')
+UPDATE payments SET comment = "72E248374A347630X" WHERE paymentID = 51048
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51048, 1, '', '', '', '')
+UPDATE payments SET comment = "2BA76250FV745161T" WHERE paymentID = 51049
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51049, 1, '', '', '', '')
+UPDATE payments SET comment = "9X698953LW946511P" WHERE paymentID = 51050
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51050, 1, '', '', '', '')
+UPDATE payments SET comment = "697632742R2480509" WHERE paymentID = 51051
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51051, 1, '', '', '', '')
+UPDATE payments SET comment = "41671390K01356522" WHERE paymentID = 51052
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51052, 1, '', '', '', '')
+UPDATE payments SET comment = "212123264E854804W" WHERE paymentID = 51053
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51053, 1, '', '', '', '')
+UPDATE payments SET comment = "7WB32207Y2827321X" WHERE paymentID = 51054
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51054, 1, '', '', '', '')
+UPDATE payments SET comment = "39M66371HH442202G" WHERE paymentID = 51072
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51072, 1, '', '', '', '')
+UPDATE payments SET comment = "54U00852NC502193N" WHERE paymentID = 51073
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51073, 1, '', '', '', '')
+UPDATE payments SET comment = "7XK18494FM098081S" WHERE paymentID = 51074
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51074, 1, '', '', '', '')
+UPDATE payments SET comment = "4YJ74693Y3979230R" WHERE paymentID = 51075
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51075, 1, '', '', '', '')
+UPDATE payments SET comment = "39W49644BV547181K" WHERE paymentID = 51076
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51076, 1, '', '', '', '')
+UPDATE payments SET comment = "95K908475X699605D" WHERE paymentID = 51077
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51077, 1, '', '', '', '')
+UPDATE payments SET comment = "73L3501552653515S" WHERE paymentID = 51078
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51078, 1, '', '', '', '')
+UPDATE payments SET comment = "1UV94105CA258613X" WHERE paymentID = 51079
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51079, 1, '', '', '', '')
+UPDATE payments SET comment = "0P0225771W7952715" WHERE paymentID = 51080
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51080, 1, '', '', '', '')
+UPDATE payments SET comment = "75Y02493B7595935V" WHERE paymentID = 51081
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51081, 1, '', '', '', '')
+UPDATE payments SET comment = "11C779991W6545508" WHERE paymentID = 51082
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51082, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "13S39875051728422" WHERE paymentID = 51083
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51083, 1, '', '', '', '')
+UPDATE payments SET comment = "9XP17146BJ172302S" WHERE paymentID = 51084
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51084, 1, '', '', '', '')
+UPDATE payments SET comment = "3T613434GL242764S" WHERE paymentID = 51085
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51085, 1, '', '', '', '')
+UPDATE payments SET comment = "8FM50289RT4590443" WHERE paymentID = 51086
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51086, 1, '', '', '', '')
+UPDATE payments SET comment = "5Y483502KN120103A" WHERE paymentID = 51087
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51087, 1, '', '', '', '')
+UPDATE payments SET comment = "725346188N333325D" WHERE paymentID = 51088
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51088, 1, '', '', '', '')
+UPDATE payments SET comment = "3WX522311E252241P" WHERE paymentID = 51089
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51089, 1, '', '', '', '')
+UPDATE payments SET comment = "0LA42687D7501704A" WHERE paymentID = 51090
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51090, 1, '', '', '', '')
+UPDATE payments SET comment = "7GL61527KB230454A" WHERE paymentID = 51091
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51091, 1, '', '', '', '')
+UPDATE payments SET comment = "2DH52001GA347902G" WHERE paymentID = 51092
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51092, 1, '', '', '', '')
+UPDATE payments SET comment = "2BH741930G543232F" WHERE paymentID = 51093
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51093, 1, '', '', '', '')
+UPDATE payments SET comment = "7VC93619F46934601" WHERE paymentID = 51094
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51094, 1, '', '', '', '')
+UPDATE payments SET comment = "62D73248XE5612536" WHERE paymentID = 51095
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51095, 1, '', '', '', '')
+UPDATE payments SET comment = "5GN88917FB847660J" WHERE paymentID = 51097
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51097, 1, '', '', '', '')
+UPDATE payments SET comment = "2HA61413KH868615U" WHERE paymentID = 51098
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51098, 1, '', '', '', '')
+UPDATE payments SET comment = "9KB71767RW324880H" WHERE paymentID = 51100
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51100, 1, '', '', '', '')
+UPDATE payments SET comment = "18458442GX487941V" WHERE paymentID = 51103
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51103, 1, '', '', '', '')
+UPDATE payments SET comment = "55R62697R2603705L" WHERE paymentID = 51104
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51104, 1, '', '', '', '')
+UPDATE payments SET comment = "5SE293208S6706120" WHERE paymentID = 51107
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51107, 1, '', '', '', '')
+UPDATE payments SET comment = "5JW796826E978581C" WHERE paymentID = 51127
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51127, 1, '', '', '', '')
+UPDATE payments SET comment = "6DE21856B4785321E" WHERE paymentID = 51128
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51128, 1, '', '', '', '')
+UPDATE payments SET comment = "46H94061138373302" WHERE paymentID = 51129
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51129, 1, '', '', '', '')
+UPDATE payments SET comment = "7RD61596RK0749149" WHERE paymentID = 51130
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51130, 1, '', '', '', '')
+UPDATE payments SET comment = "6AJ32699SK572313A" WHERE paymentID = 51131
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51131, 1, '', '', '', '')
+UPDATE payments SET comment = "8MC447158J469254C" WHERE paymentID = 51133
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51133, 1, '', '', '', '')
+UPDATE payments SET comment = "7PN30629GS5837900" WHERE paymentID = 51134
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51134, 1, '', '', '', '')
+UPDATE payments SET comment = "4AN15148XA014192C" WHERE paymentID = 51135
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51135, 1, '', '', '', '')
+UPDATE payments SET comment = "7WH22442RD8011436" WHERE paymentID = 51136
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51136, 1, '', '', '', '')
+UPDATE payments SET comment = "89K379353U557441F" WHERE paymentID = 51137
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51137, 1, '', '', '', '')
+UPDATE payments SET comment = "4TF482626E4412911" WHERE paymentID = 51138
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51138, 1, '', '', '', '')
+UPDATE payments SET comment = "9B247270F25135022" WHERE paymentID = 51139
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51139, 1, '', '', '', '')
+UPDATE payments SET comment = "7K5327145E133271F" WHERE paymentID = 51140
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51140, 1, '', '', '', '')
+UPDATE payments SET comment = "0CD433055X971505U" WHERE paymentID = 51141
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51141, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "47720247FV537970V" WHERE paymentID = 51142
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51142, 1, '', '', '', '')
+UPDATE payments SET comment = "1NA84583CG388550E" WHERE paymentID = 51143
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51143, 1, '', '', '', '')
+UPDATE payments SET comment = "5MP75610GT377394N" WHERE paymentID = 51144
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51144, 1, '', '', '', '')
+UPDATE payments SET comment = "0DK8834112857933B" WHERE paymentID = 51145
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51145, 1, '', '', '', '')
+UPDATE payments SET comment = "4KE790569L786602Y" WHERE paymentID = 51146
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51146, 1, '', '', '', '')
+UPDATE payments SET comment = "5EH39159XU4424719" WHERE paymentID = 51147
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51147, 1, '', '', '', '')
+UPDATE payments SET comment = "5FV309017U149341U" WHERE paymentID = 51148
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51148, 1, '', '', '', '')
+UPDATE payments SET comment = "0JG76078968256109" WHERE paymentID = 51149
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51149, 1, '', '', '', '')
+UPDATE payments SET comment = "4DX651429A022200C" WHERE paymentID = 51150
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51150, 1, '', '', '', '')
+UPDATE payments SET comment = "80V00165YT468605C" WHERE paymentID = 51151
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51151, 1, '', '', '', '')
+UPDATE payments SET comment = "38A623801A940162T" WHERE paymentID = 51152
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51152, 1, '', '', '', '')
+UPDATE payments SET comment = "35P43519GJ015154F" WHERE paymentID = 51153
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51153, 1, '', '', '', '')
+UPDATE payments SET comment = "59J880643Y4208138" WHERE paymentID = 51154
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51154, 1, '', '', '', '')
+UPDATE payments SET comment = "5151120647818290V" WHERE paymentID = 51155
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51155, 1, '', '', '', '')
+UPDATE payments SET comment = "2YH22540EG145923E" WHERE paymentID = 51156
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51156, 1, '', '', '', '')
+UPDATE payments SET comment = "4G947856WC428572J" WHERE paymentID = 51157
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51157, 1, '', '', '', '')
+UPDATE payments SET comment = "9NL09273U61313523" WHERE paymentID = 51158
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51158, 1, '', '', '', '')
+UPDATE payments SET comment = "2DX60741X1565973U" WHERE paymentID = 51159
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51159, 1, '', '', '', '')
+UPDATE payments SET comment = "9H413693FN3578946" WHERE paymentID = 51160
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51160, 1, '', '', '', '')
+UPDATE payments SET comment = "7KW17332DJ423204K" WHERE paymentID = 51161
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51161, 1, '', '', '', '')
+UPDATE payments SET comment = "2KJ23289JC460545U" WHERE paymentID = 51162
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51162, 1, '', '', '', '')
+UPDATE payments SET comment = "7ER159245X193324U" WHERE paymentID = 51163
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51163, 1, '', '', '', '')
+UPDATE payments SET comment = "6CK18200E0996320X" WHERE paymentID = 51164
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51164, 1, '', '', '', '')
+UPDATE payments SET comment = "6L186600935075213" WHERE paymentID = 51165
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51165, 1, '', '', '', '')
+UPDATE payments SET comment = "23D32515KV951145P" WHERE paymentID = 51166
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51166, 1, '', '', '', '')
+UPDATE payments SET comment = "2ED04526A4011000V" WHERE paymentID = 51167
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51167, 1, '', '', '', '')
+UPDATE payments SET comment = "5RS20853LH682044A" WHERE paymentID = 51169
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51169, 1, '', '', '', '')
+UPDATE payments SET comment = "0NG16469J1487214J" WHERE paymentID = 51170
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51170, 1, '', '', '', '')
+UPDATE payments SET comment = "05067121TH525601Y" WHERE paymentID = 51171
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51171, 1, '', '', '', '')
+UPDATE payments SET comment = "378874709C932134N" WHERE paymentID = 51172
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51172, 1, '', '', '', '')
+UPDATE payments SET comment = "8VF08418C1895000W" WHERE paymentID = 51173
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51173, 1, '', '', '', '')
+UPDATE payments SET comment = "2G014584A69303153" WHERE paymentID = 51174
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51174, 1, '', '', '', '')
+UPDATE payments SET comment = "7WS71668XX4924808" WHERE paymentID = 51175
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51175, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "2CB61274GD452564B" WHERE paymentID = 51176
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51176, 1, '', '', '', '')
+UPDATE payments SET comment = "7ML42765NY327542L" WHERE paymentID = 51182
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51182, 1, '', '', '', '')
+UPDATE payments SET comment = "95373409453734306" WHERE paymentID = 51184
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51184, 1, '', '', '', '')
+UPDATE payments SET comment = "7RN347057U3853609" WHERE paymentID = 51214
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51214, 1, '', '', '', '')
+UPDATE payments SET comment = "2WL56883X1181784G" WHERE paymentID = 51215
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51215, 1, '', '', '', '')
+UPDATE payments SET comment = "1FK41484K4077133P" WHERE paymentID = 51216
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51216, 1, '', '', '', '')
+UPDATE payments SET comment = "5K537953SJ649824N" WHERE paymentID = 51217
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51217, 1, '', '', '', '')
+UPDATE payments SET comment = "6JD756849V4787735" WHERE paymentID = 51220
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51220, 1, '', '', '', '')
+UPDATE payments SET comment = "5R3652155R938134P" WHERE paymentID = 51221
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51221, 1, '', '', '', '')
+UPDATE payments SET comment = "10B175833W121724C" WHERE paymentID = 51222
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51222, 1, '', '', '', '')
+UPDATE payments SET comment = "47C89091X9772243F" WHERE paymentID = 51223
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51223, 1, '', '', '', '')
+UPDATE payments SET comment = "8F845071S1691632M" WHERE paymentID = 51224
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51224, 1, '', '', '', '')
+UPDATE payments SET comment = "2KN40748X00026237" WHERE paymentID = 51225
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51225, 1, '', '', '', '')
+UPDATE payments SET comment = "7T5147572N555290Y" WHERE paymentID = 51226
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51226, 1, '', '', '', '')
+UPDATE payments SET comment = "9G66800715565491P" WHERE paymentID = 51227
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51227, 1, '', '', '', '')
+UPDATE payments SET comment = "7PT02592V0580080L" WHERE paymentID = 51228
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51228, 1, '', '', '', '')
+UPDATE payments SET comment = "7F991131TV0907354" WHERE paymentID = 51229
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51229, 1, '', '', '', '')
+UPDATE payments SET comment = "15363996M9996342N" WHERE paymentID = 51233
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51233, 1, '', '', '', '')
+UPDATE payments SET comment = "57J7803200800134L" WHERE paymentID = 51234
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51234, 1, '', '', '', '')
+UPDATE payments SET comment = "7DC02753SK379691T" WHERE paymentID = 51235
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51235, 1, '', '', '', '')
+UPDATE payments SET comment = "6VA660193N213702B" WHERE paymentID = 51236
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51236, 1, '', '', '', '')
+UPDATE payments SET comment = "4G953167VU147410A" WHERE paymentID = 51238
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51238, 1, '', '', '', '')
+UPDATE payments SET comment = "2JY32239KU221093V" WHERE paymentID = 51239
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51239, 1, '', '', '', '')
+UPDATE payments SET comment = "9PS62780WV921824Y" WHERE paymentID = 51240
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51240, 1, '', '', '', '')
+UPDATE payments SET comment = "3HX77268P3085080S" WHERE paymentID = 51241
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51241, 1, '', '', '', '')
+UPDATE payments SET comment = "97E870081G068641U" WHERE paymentID = 51242
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51242, 1, '', '', '', '')
+UPDATE payments SET comment = "2L003111B49692800" WHERE paymentID = 51243
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51243, 1, '', '', '', '')
+UPDATE payments SET comment = "0V168603R1217521N" WHERE paymentID = 51244
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51244, 1, '', '', '', '')
+UPDATE payments SET comment = "3H737076NU551413V" WHERE paymentID = 51245
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51245, 1, '', '', '', '')
+UPDATE payments SET comment = "7RE60961PG0771235" WHERE paymentID = 51246
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51246, 1, '', '', '', '')
+UPDATE payments SET comment = "2GF44722TJ695070G" WHERE paymentID = 51247
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51247, 1, '', '', '', '')
+UPDATE payments SET comment = "1HY14276HA969202T" WHERE paymentID = 51248
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51248, 1, '', '', '', '')
+UPDATE payments SET comment = "6Y82770241858572X" WHERE paymentID = 51249
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51249, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "5P2257083V063252V" WHERE paymentID = 51250
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51250, 1, '', '', '', '')
+UPDATE payments SET comment = "75H271293M190494N" WHERE paymentID = 51251
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51251, 1, '', '', '', '')
+UPDATE payments SET comment = "4S863225N44004142" WHERE paymentID = 51252
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51252, 1, '', '', '', '')
+UPDATE payments SET comment = "8P7413697P123105Y" WHERE paymentID = 51253
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51253, 1, '', '', '', '')
+UPDATE payments SET comment = "2KE71647043385224" WHERE paymentID = 51254
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51254, 1, '', '', '', '')
+UPDATE payments SET comment = "475567896T064292J" WHERE paymentID = 51255
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51255, 1, '', '', '', '')
+UPDATE payments SET comment = "6LN95165VX1840926" WHERE paymentID = 51256
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51256, 1, '', '', '', '')
+UPDATE payments SET comment = "0C5539871H304433G" WHERE paymentID = 51257
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51257, 1, '', '', '', '')
+UPDATE payments SET comment = "6D275720YG874992J" WHERE paymentID = 51258
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51258, 1, '', '', '', '')
+UPDATE payments SET comment = "2U962882PL281273K" WHERE paymentID = 51269
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51269, 1, '', '', '', '')
+UPDATE payments SET comment = "1FE9375748258100R" WHERE paymentID = 51275
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51275, 1, '', '', '', '')
+UPDATE payments SET comment = "7H172882P6623982D" WHERE paymentID = 51276
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51276, 1, '', '', '', '')
+UPDATE payments SET comment = "0FH83910WR1217836" WHERE paymentID = 51277
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51277, 1, '', '', '', '')
+UPDATE payments SET comment = "9MR49834MS548510B" WHERE paymentID = 51278
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51278, 1, '', '', '', '')
+UPDATE payments SET comment = "8FH73843WM1063601" WHERE paymentID = 51279
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51279, 1, '', '', '', '')
+UPDATE payments SET comment = "3F41586575937844X" WHERE paymentID = 51280
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51280, 1, '', '', '', '')
+UPDATE payments SET comment = "2HF52939CX992553X" WHERE paymentID = 51281
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51281, 1, '', '', '', '')
+UPDATE payments SET comment = "4X98179270926771F" WHERE paymentID = 51288
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51288, 1, '', '', '', '')
+UPDATE payments SET comment = "8N774928HR6095508" WHERE paymentID = 51294
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51294, 1, '', '', '', '')
+UPDATE payments SET comment = "81L52578DS2301004" WHERE paymentID = 51295
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51295, 1, '', '', '', '')
+UPDATE payments SET comment = "8MU37605BA504410G" WHERE paymentID = 51296
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51296, 1, '', '', '', '')
+UPDATE payments SET comment = "5A1514854B944033H" WHERE paymentID = 51297
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51297, 1, '', '', '', '')
+UPDATE payments SET comment = "45W12290YL977023F" WHERE paymentID = 51298
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51298, 1, '', '', '', '')
+UPDATE payments SET comment = "05W556057T226654U" WHERE paymentID = 51299
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51299, 1, '', '', '', '')
+UPDATE payments SET comment = "2M1163281G015081L" WHERE paymentID = 51300
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51300, 1, '', '', '', '')
+UPDATE payments SET comment = "2GC01989S1163690X" WHERE paymentID = 51301
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51301, 1, '', '', '', '')
+UPDATE payments SET comment = "45516679Y7205671A" WHERE paymentID = 51339
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51339, 1, '', '', '', '')
+UPDATE payments SET comment = "44M37835DD537723S" WHERE paymentID = 51340
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51340, 1, '', '', '', '')
+UPDATE payments SET comment = "93W6874131313820B" WHERE paymentID = 51341
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51341, 1, '', '', '', '')
+UPDATE payments SET comment = "0U091118A6388234P" WHERE paymentID = 51342
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51342, 1, '', '', '', '')
+UPDATE payments SET comment = "74U58429UK398513A" WHERE paymentID = 51343
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51343, 1, '', '', '', '')
+UPDATE payments SET comment = "9HU16266FL8968411" WHERE paymentID = 51344
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51344, 1, '', '', '', '')
+UPDATE payments SET comment = "0F180512GV081230G" WHERE paymentID = 51345
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51345, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "0HH470255P7228401" WHERE paymentID = 51346
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51346, 1, '', '', '', '')
+UPDATE payments SET comment = "56A186412F492510T" WHERE paymentID = 51347
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51347, 1, '', '', '', '')
+UPDATE payments SET comment = "15W1408002981611F" WHERE paymentID = 51348
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51348, 1, '', '', '', '')
+UPDATE payments SET comment = "2SE35136D1141535L" WHERE paymentID = 51355
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51355, 1, '', '', '', '')
+UPDATE payments SET comment = "8GK42686NX158484P" WHERE paymentID = 51358
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51358, 1, '', '', '', '')
+UPDATE payments SET comment = "4E001470LJ6199847" WHERE paymentID = 51359
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51359, 1, '', '', '', '')
+UPDATE payments SET comment = "4E793996M9131661B" WHERE paymentID = 51360
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51360, 1, '', '', '', '')
+UPDATE payments SET comment = "88L18450VH015321D" WHERE paymentID = 51361
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51361, 1, '', '', '', '')
+UPDATE payments SET comment = "43014310M4888735C" WHERE paymentID = 51362
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51362, 1, '', '', '', '')
+UPDATE payments SET comment = "78B84451BJ129923L" WHERE paymentID = 51364
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51364, 1, '', '', '', '')
+UPDATE payments SET comment = "6HJ72462JM665894H" WHERE paymentID = 51365
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51365, 1, '', '', '', '')
+UPDATE payments SET comment = "42Y82995T58292632" WHERE paymentID = 51366
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51366, 1, '', '', '', '')
+UPDATE payments SET comment = "8GL10110RF034491Y" WHERE paymentID = 51367
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51367, 1, '', '', '', '')
+UPDATE payments SET comment = "3JP98438DD591193Y" WHERE paymentID = 51368
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51368, 1, '', '', '', '')
+UPDATE payments SET comment = "05W58938364894123" WHERE paymentID = 51369
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51369, 1, '', '', '', '')
+UPDATE payments SET comment = "45V77429PC553610G" WHERE paymentID = 51370
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51370, 1, '', '', '', '')
+UPDATE payments SET comment = "04X224888L791812V" WHERE paymentID = 51372
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51372, 1, '', '', '', '')
+UPDATE payments SET comment = "4ME540201K7031037" WHERE paymentID = 51373
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51373, 1, '', '', '', '')
+UPDATE payments SET comment = "8SX43376NP4356901" WHERE paymentID = 51375
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51375, 1, '', '', '', '')
+UPDATE payments SET comment = "5DV28422PA604523R" WHERE paymentID = 51376
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51376, 1, '', '', '', '')
+UPDATE payments SET comment = "6PW5403981467513R" WHERE paymentID = 51377
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51377, 1, '', '', '', '')
+UPDATE payments SET comment = "2X27344067293012J" WHERE paymentID = 51378
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51378, 1, '', '', '', '')
+UPDATE payments SET comment = "8NS49009HN5951047" WHERE paymentID = 51379
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51379, 1, '', '', '', '')
+UPDATE payments SET comment = "1AD31706GW813830D" WHERE paymentID = 51380
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51380, 1, '', '', '', '')
+UPDATE payments SET comment = "462196689E127550E" WHERE paymentID = 51381
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51381, 1, '', '', '', '')
+UPDATE payments SET comment = "1J477856JK3337314" WHERE paymentID = 51382
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51382, 1, '', '', '', '')
+UPDATE payments SET comment = "86E70558W06652359" WHERE paymentID = 51384
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51384, 1, '', '', '', '')
+UPDATE payments SET comment = "2C443672KU695031N" WHERE paymentID = 51385
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51385, 1, '', '', '', '')
+UPDATE payments SET comment = "9H417351BT865334N" WHERE paymentID = 51386
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51386, 1, '', '', '', '')
+UPDATE payments SET comment = "0T3759635N7801146" WHERE paymentID = 51387
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51387, 1, '', '', '', '')
+UPDATE payments SET comment = "1H172386WS796322F" WHERE paymentID = 51388
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51388, 1, '', '', '', '')
+UPDATE payments SET comment = "75899677VP6918711" WHERE paymentID = 51389
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51389, 1, '', '', '', '')
+UPDATE payments SET comment = "6S011023CY6688824" WHERE paymentID = 51390
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51390, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "0K90909579187183V" WHERE paymentID = 51394
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51394, 1, '', '', '', '')
+UPDATE payments SET comment = "76V724928G166933W" WHERE paymentID = 51395
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51395, 1, '', '', '', '')
+UPDATE payments SET comment = "7Y066812XW999094X" WHERE paymentID = 51398
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51398, 1, '', '', '', '')
+UPDATE payments SET comment = "3YX80228KY905592K" WHERE paymentID = 51399
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51399, 1, '', '', '', '')
+UPDATE payments SET comment = "6W983952KS729435C" WHERE paymentID = 51400
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51400, 1, '', '', '', '')
+UPDATE payments SET comment = "1YS80670XK6784247" WHERE paymentID = 51401
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51401, 1, '', '', '', '')
+UPDATE payments SET comment = "3FS02858XJ5297705" WHERE paymentID = 51403
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51403, 1, '', '', '', '')
+UPDATE payments SET comment = "7JV57562DD3695121" WHERE paymentID = 51405
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51405, 1, '', '', '', '')
+UPDATE payments SET comment = "8R0663616S022130H" WHERE paymentID = 51406
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51406, 1, '', '', '', '')
+UPDATE payments SET comment = "41F83500BF217632N" WHERE paymentID = 51408
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51408, 1, '', '', '', '')
+UPDATE payments SET comment = "8UA775081N716973P" WHERE paymentID = 51410
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51410, 1, '', '', '', '')
+UPDATE payments SET comment = "3S895039PM476922H" WHERE paymentID = 51411
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51411, 1, '', '', '', '')
+UPDATE payments SET comment = "7L23531136950272U" WHERE paymentID = 51412
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51412, 1, '', '', '', '')
+UPDATE payments SET comment = "29G256475T532030T" WHERE paymentID = 51413
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51413, 1, '', '', '', '')
+UPDATE payments SET comment = "9GC88442FH8984949" WHERE paymentID = 51414
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51414, 1, '', '', '', '')
+UPDATE payments SET comment = "0LG82410W79843539" WHERE paymentID = 51419
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51419, 1, '', '', '', '')
+UPDATE payments SET comment = "6WN62013GR4103346" WHERE paymentID = 51420
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51420, 1, '', '', '', '')
+UPDATE payments SET comment = "23B01401SK955093G" WHERE paymentID = 51421
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51421, 1, '', '', '', '')
+UPDATE payments SET comment = "4SU750819L949802R" WHERE paymentID = 51422
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51422, 1, '', '', '', '')
+UPDATE payments SET comment = "94R66614ET1222623" WHERE paymentID = 51423
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51423, 1, '', '', '', '')
+UPDATE payments SET comment = "2SH51408AS934193N" WHERE paymentID = 51424
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51424, 1, '', '', '', '')
+UPDATE payments SET comment = "10J42987LG380612A" WHERE paymentID = 51425
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51425, 1, '', '', '', '')
+UPDATE payments SET comment = "3P2264889P594825E" WHERE paymentID = 51426
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51426, 1, '', '', '', '')
+UPDATE payments SET comment = "8FF28553TS165311F" WHERE paymentID = 51429
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51429, 1, '', '', '', '')
+UPDATE payments SET comment = "88X250869N4223943" WHERE paymentID = 51430
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51430, 1, '', '', '', '')
+UPDATE payments SET comment = "9NY211171N7744516" WHERE paymentID = 51431
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51431, 1, '', '', '', '')
+UPDATE payments SET comment = "06349143L8442913T" WHERE paymentID = 51462
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51462, 1, '', '', '', '')
+UPDATE payments SET comment = "8NA945896G476450Y" WHERE paymentID = 51463
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51463, 1, '', '', '', '')
+UPDATE payments SET comment = "9PE49634PE5175941" WHERE paymentID = 51464
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51464, 1, '', '', '', '')
+UPDATE payments SET comment = "563748728D9107458" WHERE paymentID = 51465
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51465, 1, '', '', '', '')
+UPDATE payments SET comment = "09L82427TR359152K" WHERE paymentID = 51466
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51466, 1, '', '', '', '')
+UPDATE payments SET comment = "1RG14872SB237251C" WHERE paymentID = 51467
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51467, 1, '', '', '', '')
+UPDATE payments SET comment = "38T96324RK166261D" WHERE paymentID = 51468
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51468, 1, '', '', '', '')
+go
+UPDATE payments SET comment = "1VR884682P764954B" WHERE paymentID = 51469
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51469, 1, '', '', '', '')
+UPDATE payments SET comment = "0FY98740Y4527914H" WHERE paymentID = 51470
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51470, 1, '', '', '', '')
+UPDATE payments SET comment = "0BG785319U178721X" WHERE paymentID = 51473
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51473, 1, '', '', '', '')
+UPDATE payments SET comment = "9D8497243R7422930" WHERE paymentID = 51474
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51474, 1, '', '', '', '')
+UPDATE payments SET comment = "6G728858TT673054D" WHERE paymentID = 51477
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51477, 1, '', '', '', '')
+UPDATE payments SET comment = "7S276169026119207" WHERE paymentID = 51485
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51485, 1, '', '', '', '')
+UPDATE payments SET comment = "279725338C3563449" WHERE paymentID = 51488
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51488, 1, '', '', '', '')
+UPDATE payments SET comment = "5LH80824UG6192630" WHERE paymentID = 51489
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51489, 1, '', '', '', '')
+UPDATE payments SET comment = "8LL647720U1733510" WHERE paymentID = 51490
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51490, 1, '', '', '', '')
+UPDATE payments SET comment = "35P43519GJ015154F" WHERE paymentID = 51491
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51491, 1, '', '', '', '')
+UPDATE payments SET comment = "6FP72650WV905091C" WHERE paymentID = 51494
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51494, 1, '', '', '', '')
+UPDATE payments SET comment = "0RS23517KM713711E" WHERE paymentID = 51501
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51501, 1, '', '', '', '')
+UPDATE payments SET comment = "8C111487TE433223W" WHERE paymentID = 51502
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51502, 1, '', '', '', '')
+UPDATE payments SET comment = "3YE69833VA338894E" WHERE paymentID = 51505
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51505, 1, '', '', '', '')
+UPDATE payments SET comment = "8CV94211GJ077044T" WHERE paymentID = 51506
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51506, 1, '', '', '', '')
+UPDATE payments SET comment = "0ES69794GG128382E" WHERE paymentID = 51507
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51507, 1, '', '', '', '')
+UPDATE payments SET comment = "6MH03657CK1980122" WHERE paymentID = 51508
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51508, 1, '', '', '', '')
+UPDATE payments SET comment = "3S591645R94210512" WHERE paymentID = 51509
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51509, 1, '', '', '', '')
+UPDATE payments SET comment = "6R505939921690009" WHERE paymentID = 51512
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51512, 1, '', '', '', '')
+UPDATE payments SET comment = "9LM15016725781346" WHERE paymentID = 51513
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51513, 1, '', '', '', '')
+UPDATE payments SET comment = "0EN59016KL412821W" WHERE paymentID = 51514
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51514, 1, '', '', '', '')
+UPDATE payments SET comment = "1U961402DC181472K" WHERE paymentID = 51515
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51515, 1, '', '', '', '')
+UPDATE payments SET comment = "6G306966TJ813462G" WHERE paymentID = 51516
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51516, 1, '', '', '', '')
+UPDATE payments SET comment = "97B87556AM255980M" WHERE paymentID = 51517
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51517, 1, '', '', '', '')
+UPDATE payments SET comment = "2L386539638037540" WHERE paymentID = 51520
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51520, 1, '', '', '', '')
+UPDATE payments SET comment = "3SY384802R606563R" WHERE paymentID = 51529
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51529, 1, '', '', '', '')
+UPDATE payments SET comment = "29M5281075059550Y" WHERE paymentID = 51530
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51530, 1, '', '', '', '')
+UPDATE payments SET comment = "95U91911ME328245E" WHERE paymentID = 51531
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51531, 1, '', '', '', '')
+UPDATE payments SET comment = "7F621098Y1083210B" WHERE paymentID = 51532
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51532, 1, '', '', '', '')
+UPDATE payments SET comment = "1SJ603812F738742S" WHERE paymentID = 51534
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51534, 1, '', '', '', '')
+UPDATE payments SET comment = "21E95016CA663281Y" WHERE paymentID = 51535
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51535, 1, '', '', '', '')
+UPDATE payments SET comment = "99467694WB997604M" WHERE paymentID = 51536
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51536, 1, '', '', '', '')
+UPDATE payments SET comment = "22F69050Y1773145N" WHERE paymentID = 51537
+INSERT ccPayments (paymentID, pmtType, AVS_result, shopperID, orderID, approvalCode)
+VALUES (51537, 1, '', '', '', '')
+go

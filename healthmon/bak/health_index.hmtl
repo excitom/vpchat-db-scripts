@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Health Monitor</title>
+</head>
+<body>
+<h1>Health Monitor</h1>
+<hr>
+Updated: #TIME#<br>
+<center><code>[
+<a href="/bs/">Big Sister</a>
+|
+<a href="/mrtg/routers/">MRTG</a>
+]
+</code></center>
+<hr>
+<center>
+<table border=0>
+<tr align="center">
+<td>
+</td>
+<th>
+1 hour
+</th>
+<th>
+3 hours
+</th>
+<th>
+24 hours
+</th>
+</tr>
+<tr>
+<th>
+TCB
+</th>
+<td>
+<a href="/health/img/tcb.1h.png"><img src="/health/img/tcb.1h.thumb.png" alt="T C B - last hour" border=0></a>
+</td>
+<td>
+<a href="/health/img/tcb.3h.png"><img src="/health/img/tcb.3h.thumb.png" alt="T C B - last 3 hours" border=0></a>
+</td>
+<td>
+<a href="/health/img/tcb.24h.png"><img src="/health/img/tcb.24h.thumb.png" alt="T C B - last 24 hours" border=0></a>
+</td>
+</tr>
+<tr>
+<th>
+RGD
+</th>
+<td>
+<a href="/health/img/rgd.1h.png"><img src="/health/img/rgd.1h.thumb.png" alt="R G D - last hour" border=0></a>
+</td>
+<td>
+<a href="/health/img/rgd.3h.png"><img src="/health/img/rgd.3h.thumb.png" alt="R G D - last 3 hours" border=0></a>
+</td>
+<td>
+<a href="/health/img/rgd.24h.png"><img src="/health/img/rgd.24h.thumb.png" alt="R G D - last 24 hours" border=0></a>
+</td>
+</tr>
+<tr>
+<th>
+TD<br>
+(Safety<br>
+Check)
+</th>
+<td>
+<a href="/health/img/td.1h.png"><img src="/health/img/td.1h.thumb.png" alt="T D - last hour" border=0></a>
+</td>
+<td>
+<a href="/health/img/td.3h.png"><img src="/health/img/td.3h.thumb.png" alt="T D - last 3 hours" border=0></a>
+</td>
+<td>
+<a href="/health/img/td.24h.png"><img src="/health/img/td.24h.thumb.png" alt="T D - last 24 hours" border=0></a>
+</td>
+</tr>
+<tr>
+<th colspan=4 align="center">
+Thumbnails indicate traffic shape and trend; results are not to scale.
+</th>
+</tr>
+</table>
+</center>
+<hr>
+<pre>
+#SNAPSHOT#
+</pre>
+<hr>
+Updated: #TIME#<br>
+<hr>
+</body>
+</html>

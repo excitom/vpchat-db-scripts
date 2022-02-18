@@ -1,0 +1,366 @@
+http://chatads.excite.com/chat/rooms/talkin_trash.dcg
+Talkin Trash
+6
+http://talk.excite.com/chat/rooms/20ish.html
+20ish
+1
+http://talk.excite.com/chat/rooms/30ish.html
+30ish
+1
+http://talk.excite.com/chat/rooms/40ish.html
+40ish
+1
+http://talk.excite.com/chat/rooms/50plus.html
+50-plus
+1
+http://talk.excite.com/chat/rooms/african_american.html
+African American Chat
+1
+http://talk.excite.com/chat/rooms/arcade.html
+The Gaming Arcade
+2
+http://talk.excite.com/chat/rooms/auto_chat.html
+Auto Chat
+2
+http://talk.excite.com/chat/rooms/books.html
+Book Discussions
+4
+http://talk.excite.com/chat/rooms/campus.html
+Campus
+1
+http://talk.excite.com/chat/rooms/channel/business/small_business.html
+Small Business
+2
+http://talk.excite.com/chat/rooms/channel/careers/fire_EMS.html
+Fire/EMS Rescue
+2
+http://talk.excite.com/chat/rooms/channel/computers/web_design.html
+Web Design
+5
+http://talk.excite.com/chat/rooms/channel/entertainment/sci_fi.html
+Science Fiction
+2
+http://talk.excite.com/chat/rooms/channel/entertainment/soap_opera.html
+Soap Operas
+2
+http://talk.excite.com/chat/rooms/channel/entertainment/visual_arts.html
+Visual Arts
+4
+http://talk.excite.com/chat/rooms/channel/games/rpg.html
+Role-Playing Games
+2
+http://talk.excite.com/chat/rooms/channel/health/health_zone.html
+The Health Zone
+5
+http://talk.excite.com/chat/rooms/channel/lifestyle/cloud_nine.html
+Cloud Nine
+4
+http://talk.excite.com/chat/rooms/channel/lifestyle/genealogy_chat.html
+Genealogy Chat
+4
+http://talk.excite.com/chat/rooms/channel/lifestyle/grandparents.html
+Grandparents
+1
+http://talk.excite.com/chat/rooms/channel/lifestyle/home_garden.html
+Home and Garden
+2
+http://talk.excite.com/chat/rooms/channel/lifestyle/love_counselors.html
+Love Counselors
+5
+http://talk.excite.com/chat/rooms/channel/lifestyle/married_life.html
+Married Life
+1
+http://talk.excite.com/chat/rooms/channel/lifestyle/parenting_forum.html
+Parenting Forum
+5
+http://talk.excite.com/chat/rooms/channel/lifestyle/pet_chat.html
+Pet Chat
+4
+http://talk.excite.com/chat/rooms/channel/lifestyle/rv_park.html
+RV Chat Park
+4
+http://talk.excite.com/chat/rooms/channel/lifestyle/singles_club.html
+Singles Club
+1
+http://talk.excite.com/chat/rooms/channel/lifestyle/soul_flava.html
+Soul Flava
+5
+http://talk.excite.com/chat/rooms/channel/lifestyle/teen_lifestyle.html
+Teen Lifestyle
+5
+http://talk.excite.com/chat/rooms/channel/lifestyle/trivia_chat.html
+Trivia Chat
+5
+http://talk.excite.com/chat/rooms/channel/news/white_house.html
+White House
+5
+http://talk.excite.com/chat/rooms/channel/shopping/beanie_babies.html
+Beanie Babies
+2
+http://talk.excite.com/chat/rooms/channel/shopping/beauty_and_fashion.html
+Beauty and Fashion
+4
+http://talk.excite.com/chat/rooms/channel/shopping/epicurean.html
+The Epicurean
+4
+http://talk.excite.com/chat/rooms/channel/sports/baseball.html
+Baseball
+2
+http://talk.excite.com/chat/rooms/channel/sports/basketball.html
+Basketball
+2
+http://talk.excite.com/chat/rooms/channel/sports/football.html
+Football
+2
+http://talk.excite.com/chat/rooms/channel/sports/golf.html
+Golf
+2
+http://talk.excite.com/chat/rooms/channel/sports/hockey.html
+Hockey
+2
+http://talk.excite.com/chat/rooms/channel/sports/wrestling.html
+Wrestling
+2
+http://talk.excite.com/chat/rooms/channel/travel/australia_and_oceania/australia/outback.html
+The Outback
+3
+http://talk.excite.com/chat/rooms/channel/travel/caribbean/index.html
+Caribbean
+3
+http://talk.excite.com/chat/rooms/channel/travel/central_america/latin_america.html
+Latin America
+3
+http://talk.excite.com/chat/rooms/channel/travel/europe/ireland/index.html
+Ireland
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/mexico/index.html
+Mexico
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/california/los_angeles.html
+Los Angeles
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/california/san_francisco.html
+San Francisco
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/florida/index.html
+Florida
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/illinois/chicago.html
+Chicago
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/massachusetts/boston.html
+Boston
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/new_york/new_york_city.html
+New York City
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/rockies.html
+The Rockies
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/south.html
+The South
+3
+http://talk.excite.com/chat/rooms/channel/travel/north_america/us/texas/index.html
+Texas
+3
+http://talk.excite.com/chat/rooms/computers.html
+Computers-and-Internet
+2
+http://talk.excite.com/chat/rooms/davinci.html
+DaVinci's Notebook
+4
+http://talk.excite.com/chat/rooms/directory/entertainment/movies.html
+Movies
+2
+http://talk.excite.com/chat/rooms/directory/entertainment/television.html
+Television
+2
+http://talk.excite.com/chat/rooms/directory/money_and_investing/small_business.html
+Small Business
+2
+http://talk.excite.com/chat/rooms/directory/relationships/books.html
+Books
+2
+http://talk.excite.com/chat/rooms/entertainment/movies.html
+Movies
+2
+http://talk.excite.com/chat/rooms/events/computer_lab.html
+Computer Lab
+5
+http://talk.excite.com/chat/rooms/events/cooking.html
+Cooking Chat
+5
+http://talk.excite.com/chat/rooms/events/current_events.html
+JFK, Jr.
+5
+http://talk.excite.com/chat/rooms/events/film_trivia.html
+Film Trivia
+5
+http://talk.excite.com/chat/rooms/events/ghost_stories.html
+Ghost Stories
+5
+http://talk.excite.com/chat/rooms/events/poetry_cafe.html
+Poetry Cafe
+5
+http://talk.excite.com/chat/rooms/events/study_lounge.html
+Study Lounge
+4
+http://talk.excite.com/chat/rooms/events/summertime.html
+Summertime
+5
+http://talk.excite.com/chat/rooms/events/todays_event.html
+Today's Event
+5
+http://talk.excite.com/chat/rooms/events/tour_depot.html
+Tour Depot
+5
+http://talk.excite.com/chat/rooms/fishbowl.html
+Fishbowl
+4
+http://talk.excite.com/chat/rooms/general/cafe.html
+The Cafe
+4
+http://talk.excite.com/chat/rooms/general/club.html
+Club Chat
+4
+http://talk.excite.com/chat/rooms/general/happy_hour.html
+The Happy Hour Bar
+4
+http://talk.excite.com/chat/rooms/general/lounge.html
+The Lounge
+4
+http://talk.excite.com/chat/rooms/grrls_domain.html
+Grrls' Domain
+1
+http://talk.excite.com/chat/rooms/health_spa.html
+Health Spa
+2
+http://talk.excite.com/chat/rooms/hunt_fish.html
+Hunting and Fishing
+2
+http://talk.excite.com/chat/rooms/jumbled.html
+Jumbled
+2
+http://talk.excite.com/chat/rooms/latino.html
+El Salon Latino
+1
+http://talk.excite.com/chat/rooms/life_style.html
+Life and Style
+2
+http://talk.excite.com/chat/rooms/literary_salon.html
+Literary Salon
+5
+http://talk.excite.com/chat/rooms/music_lounge.html
+Music Lounge
+2
+http://talk.excite.com/chat/rooms/nightsky.html
+Night!
+4
+http://talk.excite.com/chat/rooms/peers/african_american.html
+African American Chat
+1
+http://talk.excite.com/chat/rooms/peers/asian_american.html
+Asian-American Chat
+1
+http://talk.excite.com/chat/rooms/peers/christians.html
+Christian Chat
+1
+http://talk.excite.com/chat/rooms/peers/divorced.html
+Divorced Chat
+1
+http://talk.excite.com/chat/rooms/peers/guy_talk.html
+Guy Talk
+1
+http://talk.excite.com/chat/rooms/peers/native_american.html
+Native American Chat
+1
+http://talk.excite.com/chat/rooms/peers/parents.html
+Parents Chat
+1
+http://talk.excite.com/chat/rooms/peers/veterans.html
+Veterans' Chat
+1
+http://talk.excite.com/chat/rooms/phone_room.html
+The Phone Booth
+4
+http://talk.excite.com/chat/rooms/pink_triangle.html
+Pink Triangle
+1
+http://talk.excite.com/chat/rooms/quicken.html
+Money Talks
+2
+http://talk.excite.com/chat/rooms/reading_room.html
+Reading Room
+2
+http://talk.excite.com/chat/rooms/regional/africa.html
+Africa
+3
+http://talk.excite.com/chat/rooms/regional/asia.html
+Asia
+3
+http://talk.excite.com/chat/rooms/regional/australia.html
+Australia
+3
+http://talk.excite.com/chat/rooms/regional/canada.html
+Canada
+3
+http://talk.excite.com/chat/rooms/regional/eastcoast.html
+East Coast (U.S.)
+3
+http://talk.excite.com/chat/rooms/regional/france.html
+France
+3
+http://talk.excite.com/chat/rooms/regional/germany.html
+Germany
+3
+http://talk.excite.com/chat/rooms/regional/japan.html
+Japan
+3
+http://talk.excite.com/chat/rooms/regional/midwest.html
+Midwest (U.S.)
+3
+http://talk.excite.com/chat/rooms/regional/southwest.html
+Southwest (U.S.)
+3
+http://talk.excite.com/chat/rooms/regional/sweden.html
+Sweden
+3
+http://talk.excite.com/chat/rooms/regional/united_kingdom.html
+United Kingdom
+3
+http://talk.excite.com/chat/rooms/regional/united_states.html
+United States
+3
+http://talk.excite.com/chat/rooms/regional/westcoast.html
+West Coast (U.S.)
+3
+http://talk.excite.com/chat/rooms/soapbox.html
+The Soapbox
+2
+http://talk.excite.com/chat/rooms/sports_arena.html
+Sports Arena
+2
+http://talk.excite.com/chat/rooms/star_wars.html
+Star Wars
+5
+http://talk.excite.com/chat/rooms/studio.html
+The Studio
+2
+http://talk.excite.com/chat/rooms/teenchat.html
+Teen Chat
+1
+http://talk.excite.com/chat/rooms/trading_floor.html
+Trading Floor
+2
+http://talk.excite.com/chat/rooms/travel.html
+Travel
+2
+http://talk.excite.com/chat/rooms/tv_room.html
+TV Room
+2
+http://talk.excite.com/chat/rooms/voyeur.html
+Web Crawler Search Voyeur
+4
+http://talk.excite.com/chat/rooms/yugoslavia.html
+Yugoslavia
+3

@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE>Perltidy open BUGS</TITLE>
+<LINK REV="made" HREF="mailto:perl@packages.debian.org">
+</HEAD>
+
+<BODY>
+
+<A NAME="__index__"></A>
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#perltidy open bugs">Perltidy open BUGS</A></LI>
+	<UL>
+
+		<LI><A HREF="#a heredoc invoked through an 'e' modifier on a pattern replacement text is not recognized">A here-doc invoked through an 'e' modifier on a pattern replacement text is not recognized</A></LI>
+		<LI><A HREF="#limitation parsing subroutine attributes and prototypes">Limitation parsing subroutine attributes and prototypes</A></LI>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="perltidy open bugs">Perltidy open BUGS</A></H1>
+<PRE>
+ You can help perltidy evolve into a better program.  If you think you
+ have hit a bug or weird behavior, or have a suggested improvement,
+ please send a note to perltidy at users.sourceforge.net.</PRE>
+<PRE>
+ This file only lists open bugs.  For bugs which have been fixed, 
+ see the ChangeLog.</PRE>
+<P>
+<H2><A NAME="a heredoc invoked through an 'e' modifier on a pattern replacement text is not recognized">A here-doc invoked through an 'e' modifier on a pattern replacement text is not recognized</A></H2>
+<P>For example, the output of perltidy for this script has a syntax error:</P>
+<PRE>
+        my $text=&quot;Hello World!\n&quot;;
+        $text =~ s@Hello@&lt;&lt;'END'@e;
+        Goodbye 
+        Cruel
+        END
+        print &quot;$text\n&quot;;</PRE>
+<P>
+<H2><A NAME="limitation parsing subroutine attributes and prototypes">Limitation parsing subroutine attributes and prototypes</A></H2>
+<P>Subroutine prototypes and attributes (a perl 5.6 feature) are not
+correctly parsed unless they are on the same line as the subroutine
+name.  (Older versions of perl require the prototype to be on
+the same line as the sub name, but perl 5.6 allows it to be on
+a separate line).  For example, this would cause an error:</P>
+<PRE>
+   sub pi 
+   ()
+   {
+     4 * atan2(1,1);
+   }</PRE>
+<P>The workaround is to simply place the prototype and/or attribute on the same
+line as the sub name, like this:</P>
+<PRE>
+   sub pi ()
+   {
+     4 * atan2(1,1);
+   }</PRE>
+<P>I have not encountered this problem in an actual script.  Fixing
+it is low priority.</P>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,48 @@
+#!/usr/bin/perl
+#
+# Copy important log files to backup server
+#
+# Tom Lang 1/2002
+#
+
+$tarFile = "/tmp/backup.tar";
+
+$now = scalar localtime;
+print "Starting log file backup - $now\n";
+open (LIST, "</u/vplaces/scripts/backup/list.txt") || die "Can't find list to backup: $!";
+$list = "";
+while (<LIST>) {
+	next if (/^#/);
+	chomp;
+	$list .= $_;
+	$list .= ' ';
+}
+close LIST;
+`tar cvf $tarFile $list`;
+
+#
+# Determine which host this is, and which host has the slave DB
+#
+@dbHosts = ('anne', 'amy');
+$s{$dbHosts[0]} = $dbHosts[1];
+$s{$dbHosts[1]} = $dbHosts[0];
+$this = `hostname`;
+chomp $this;
+$this =~ s/\..*$//;
+$slave = $s{$this};
+die "Can't figure out which hosts to use- master: $this - slave: $slave" if ($slave eq "" || $this eq "");
+
+print `ls -l $tarFile`;	# show size
+
+$now = scalar localtime;
+print "Pushing backup to slave server - $slave - $now\n";
+`/bin/rcp $tarFile $slave:/tmp`;
+
+$now = scalar localtime;
+print "Unpacking backup files - $now\n";
+`/bin/rsh amy "tar xf $tarFile;rm $tarFile"`;
+
+unlink $tarFile;
+
+$now = scalar localtime;
+print "backup complete - $now\n";

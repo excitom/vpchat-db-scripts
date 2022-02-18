@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>Health Monitor</title>
+<META HTTP-EQUIV="REFRESH" CONTENT="60">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href=https://reg.vpchat.com/layout.css type=text/css rel=stylesheet>
+</head>
+<body>
+<h3>Health Monitor</h3>
+<p>
+Updated: #TIME#<br>
+<hr>
+<center><code>[
+<a href="/bs/">Big Sister</a>
+|
+<a href="/mrtg/">MRTG</a>
+|
+<a href="/analog/">Analog</a>
+|
+<a href="/cgi-bin/RRGrapher.cgi">RRGrapher</a>
+]
+</code></center>
+<hr>
+<center>
+<table border=0>
+<tr align="center">
+<td colspan=4>
+<!--
+<a href="/health/signon.html"><img src="/health/img/signons.3h.png" width="495" height="172" alt="Signons - last 3 hours" border=0></a>
+-->
+</td>
+</tr>
+<tr align="center">
+<td>
+</td>
+<th>
+1 hour
+</th>
+<th>
+3 hours
+</th>
+<th>
+24 hours
+</th>
+</tr>
+<tr>
+<th>
+Total,<br>
+Chat &amp;<br>
+Buddy
+</th>
+<td>
+<a href="/health/img/tcb.1h.png"><img src="/health/img/tcb.1h.thumb.png" width="100" height="75" alt="Total, Chat, and Buddy - last hour" border=0></a>
+</td>
+<td>
+<a href="/health/img/tcb.3h.png"><img src="/health/img/tcb.3h.thumb.png" width="100" height="75" alt="Total, Chat, and Buddy - last 3 hours" border=0></a>
+</td>
+<td>
+<a href="/health/img/tcb.24h.png"><img src="/health/img/tcb.24h.thumb.png" width="100" height="75" alt="Total, Chat, and Buddy - last 24 hours" border=0></a>
+</td>
+</tr>
+
+<tr>
+<th>
+Adult,<br>
+Chat &amp;<br>
+Buddy
+</th>
+<td>
+<a href="/health/img/adult-tcb.1h.png"><img src="/health/img/adult-tcb.1h.thumb.png" widt
+h="100" height="75" alt="Total, Chat, and Buddy - last hour" border=0></a>
+</td>
+<td>
+<a href="/health/img/adult-tcb.3h.png"><img src="/health/img/adult-tcb.3h.thumb.png" widt
+h="100" height="75" alt="Total, Chat, and Buddy - last 3 hours" border=0></a>
+</td>
+<td>
+<a href="/health/img/adult-tcb.24h.png"><img src="/health/img/adult-tcb.24h.thumb.png" wi
+dth="100" height="75" alt="Total, Chat, and Buddy - last 24 hours" border=0></a>
+</td>
+</tr>
+
+<tr>
+<th>
+Japan,<br>
+Chat &amp;<br>
+Buddy
+</th>
+<td>
+<a href="/health/img/jp-tcb.1h.png"><img src="/health/img/jp-tcb.1h.thumb.png"
+width="100" height="75" alt="Total, Chat, and Buddy - last hour" border=0></a>
+</td>
+<td>
+<a href="/health/img/jp-tcb.3h.png"><img src="/health/img/jp-tcb.3h.thumb.png"
+width="100" height="75" alt="Total, Chat, and Buddy - last 3 hours" border=0></a>
+</td>
+<td>
+<a href="/health/img/jp-tcb.24h.png"><img src="/health/img/jp-tcb.24h.thumb.png
+" width="100" height="75" alt="Total, Chat, and Buddy - last 24 hours" border=0></a>
+</td>
+</tr>
+
+
+
+<tr>
+<th colspan=4 align="center">
+Thumbnails indicate traffic shape and trend; results are not to scale.
+</th>
+</tr>
+<a href="/health/big-health.html">Here are the full size graphs on one page</a>
+</table>
+</center>
+<hr>
+<table border=2 cellpadding=4 cellspacing=4>
+<form name=tab method=post action=/cgi-bin/health.cgi>
+<input type=hidden name=comm value='vpchat'>
+<script language=javascript>
+function doPop(comm) {
+ document.tab.action = "/cgi-bin/health.cgi";
+ document.tab.comm.value = comm;
+ document.tab.submit();
+}
+function doLogins(comm) {
+ document.tab.action = "/cgi-bin/logins.cgi";
+ document.tab.comm.value = comm;
+ document.tab.submit();
+}
+function doNavs(comm) {
+ document.tab.action = "/cgi-bin/places.cgi";
+ document.tab.comm.value = comm;
+ document.tab.submit();
+}
+</script>
+<tr>
+<th colspan=4>Tabular Data used to make the graphs</th>
+</tr>
+<tr>
+<th>Population</th>
+<td><a href='javascript:doPop("vpchat");'>vpchat</a> </td>
+<td><a href='javascript:doPop("vpadult");'>vpadult</a> </td>
+<td><a href='javascript:doPop("jp");'>talk.excite.jp</a> </td>
+</td>
+</tr>
+<tr>
+<th>Logins</th>
+<td><a href='javascript:doLogins("vpchat");'>vpchat</a> </td>
+<td><a href='javascript:doLogins("vpadult");'>vpadult</a> </td>
+<td><a href='javascript:doLogins("jp");'>talk.excite.jp</a> </td>
+</tr>
+<tr>
+<th>Navigations</th>
+<td><a href='javascript:doNavs("vpchat");'>vpchat</a> </td>
+<td><a href='javascript:doNavs("vpadult");'>vpadult</a> </td>
+<td><a href='javascript:doNavs("jp");'>talk.excite.jp</a> </td>
+</tr>
+<tr><td colspan=4 align=center>Show <input type=text size=3 name=size value=25> lines</td></tr>
+</form>
+</table>

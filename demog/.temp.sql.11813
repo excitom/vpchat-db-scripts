@@ -1,0 +1,5 @@
+select 'XXX', count(Ecom_billto_countrycode ),Ecom_billto_countrycode
+from echecks
+group by Ecom_billto_countrycode
+order by count(Ecom_billto_countrycode ) desc
+go

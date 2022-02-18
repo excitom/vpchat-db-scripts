@@ -1,0 +1,91 @@
+ use audset
+go 
+                                                     
+ update statistics auditoriumChanges
+go              
+ update statistics auditoriums
+go                    
+ update statistics eventChanges
+go                   
+ update statistics eventInteractions
+go              
+ update statistics eventState
+go                     
+ update statistics events
+go                         
+ update statistics hosts
+go                          
+ update statistics interactionsAllowed
+go            
+ update statistics stateTypes
+go                     
+ update statistics answers
+go                        
+ update statistics eventInvitees
+go                  
+ update statistics eventVotes
+go                     
+ update statistics interactionStatus
+go              
+ update statistics userVotes
+go                      
+ update statistics voteOptions
+go                    
+                 
+ use vpplaces
+go 
+                                                     
+ update statistics persistentPlacesChange
+go         
+ update statistics categories
+go                     
+ update statistics PTGlist
+go                        
+ update statistics vpPlacesList
+go                   
+ update statistics PersistentPTGlist
+go              
+ update statistics persistentPlaces
+go               
+ update statistics placeCategories
+go                
+ update statistics placeUsage
+go                     
+ update statistics shadowPlaces
+go                   
+ update statistics totalUsage
+go                     
+ update statistics dailyUsage
+go                     
+ update statistics placeTypes
+go                     
+                
+ use vpusers
+go 
+                                                    
+ update statistics users
+go                          
+ update statistics bannedNames
+go                    
+ update statistics configurationKeys
+go              
+ update statistics history
+go                        
+ update statistics penalties
+go                      
+ update statistics penaltyTypes
+go                   
+ update statistics privilegeTypes
+go                 
+ update statistics userPrivileges
+go                 
+ update statistics registration
+go                   
+ update statistics warnings
+go                       
+ update statistics passwordChanges
+go                
+ update statistics privilegeDomains
+go               
+ update statistics userDetails
+go                    

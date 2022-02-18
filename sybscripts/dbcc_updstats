@@ -1,0 +1,17 @@
+#!/usr/bin/ksh
+
+echo "Finding tables for DBCCs  -- started at `date "+%m/%d/%y-%H:%M"`" > /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+`/u/vplaces/scripts/sybscripts/getTables.pl </dev/null`;
+echo "Finding tables for DBCCs  -- DONE" >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+
+echo "DBCCs started at `date "+%m/%d/%y-%H:%M"`" >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -I/u/vplaces/s/sybase/interfaces -i/u/vplaces/scripts/sybscripts/dbcc_cmds.sql >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+
+echo "DBCCs finished at `date "+%m/%d/%y-%H:%M"`" >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+
+echo "Update Stats started at `date "+%m/%d/%y-%H:%M"`" >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -I/u/vplaces/s/sybase/interfaces -i/u/vplaces/scripts/sybscripts/updstats.sql >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out
+
+echo "Update Stats ended at `date "+%m/%d/%y-%H:%M"`" >> /u/vplaces/scripts/sybscripts/dbcc_updstats.out

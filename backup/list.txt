@@ -1,0 +1,16 @@
+#
+# This is a list of files and/or directories that are periodically
+# copied to the backup server
+#
+/logs/IPban.log
+#/logs/account_usage.log
+#/logs/altPmt
+/logs/hosts
+#/logs/ipn
+#/logs/lostPw
+#/logs/upload.log
+#/logs/users
+#/logs/accountIDs
+#/logs/accounts
+/logs/settlements
+/logs/billing

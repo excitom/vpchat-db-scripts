@@ -1,0 +1,12 @@
+create proc addr ( @accountID userIdentifier )
+as
+begin
+  if not exists (select accountID from renewals where accountID = @accountID)
+  begin
+    select @accountID
+    INSERT renewals (accountID, freeTrial, oldAcct, months, renewals,
+wentOverdue, upgrades, goodChecks, badChecks, namesAdded)
+        VALUES (@accountID, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+  end
+end
+go

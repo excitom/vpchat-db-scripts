@@ -1,0 +1,34 @@
+From: "Halsoft Customer Support" <support@halsoft.com>
+Subject: Changes to the User-Created Rooms list
+
+Hi -
+
+We're making some changes in the Halsoft VP Chat user-created rooms list.
+
+A couple of months ago we started requiring that all new listings must 
+be http://members.vpchat.com web pages. This didn't affect exising listings.
+
+The reason for this is because we promise that Halsoft VP chat is free
+of advertising, and many people were complaining when they clicked links
+in our chat rooms list and saw lots of pop-ups and banners.
+
+You get a free http://members.vpchat.com web page for each of the names
+in your account, with 10Mb of storage and 2Gb of bandwidth per month. Also
+you can log into your account at vpchat.com, click on "my web site" and
+juggle the storage space and bandwidth among your pages. For example, if you
+need more space for a page and aren't using one of your other pages, you can
+add the unused space to the page that needs it.
+
+We're now ready to make the list contain member pages exclusively. On May 
+5th we'll be removing any listings that are not Halsoft member pages.
+
+You'll still be able to have external links on your member page, of course.
+
+Thanks in advance for your cooperation and patience. These changes will 
+allow us to have a better user-created room list.
+
+You may have your own domain, or a page that doesn't have ads because you
+are paying extra for it, so you would like to keep that page in the list.
+However, to be fair to everyone, we must apply the rules equally to all.
+
+-- The Halsoft Team

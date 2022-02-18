@@ -1,0 +1,248 @@
+<HTML>
+<HEAD>
+<TITLE>A Brief Perltidy Tutorial</TITLE>
+<LINK REV="made" HREF="mailto:perl@packages.debian.org">
+</HEAD>
+
+<BODY>
+
+<A NAME="__index__"></A>
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#a brief perltidy tutorial">A Brief Perltidy Tutorial</A></LI>
+	<UL>
+
+		<LI><A HREF="#a first test">A First Test</A></LI>
+		<LI><A HREF="#making backups">Making Backups</A></LI>
+		<LI><A HREF="#tabs or spaces">Tabs or Spaces?</A></LI>
+		<LI><A HREF="#style variations, or, what are all of those other parameters for">Style Variations, or, What are All of Those Other Parameters For?</A></LI>
+		<LI><A HREF="#the log file">The Log File</A></LI>
+		<LI><A HREF="#using perltidy as a filter on selected text from an editor">Using Perltidy as a Filter on Selected Text from an Editor</A></LI>
+		<LI><A HREF="#summary">Summary</A></LI>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="a brief perltidy tutorial">A Brief Perltidy Tutorial</A></H1>
+<P>Perltidy can save you a lot of tedious editing if you spend a few
+minutes learning to use it effectively.  There are a large number of
+options available for customizing it, but for many programmers the
+default parameter set will be satisfactory, with perhaps a few
+additional parameters to account for style preferences.</P>
+<P>This tutorial assumes that perltidy has been installed on your system.
+Installation instructions accompany the package.  To follow along with
+this tutorial, please find a small Perl script and place a copy in a
+temporary directory.  For example, here is a small script (from the book
+Learning Perl 2nd edition, by Randall Schwartz and Tom Christiansen
+<A HREF="http://www.oreilly.com/catalog/lperl2/">http://www.oreilly.com/catalog/lperl2/</A>):</P>
+<PRE>
+ #Learning Perl Appendix A, Exercise 4.2
+ print &quot;What temperature is it? &quot;;
+ chop($temperature = &lt;STDIN&gt;);
+ if ($temperature &gt; 75) {
+   print &quot;Too hot!\n&quot;;
+ } elsif ($temperature &lt; 68) {
+   print &quot;Too cold!\n&quot;;
+ } else {
+   print &quot;Just right!\n&quot;;
+ }</PRE>
+<P>It is included in the <EM>docs</EM> section of the distribution.</P>
+<P>
+<H2><A NAME="a first test">A First Test</A></H2>
+<P>Assume that the name of your script is <EM>testfile.pl</EM>.  You can reformat it
+with the default options to use the style recommended in the perlstyle man
+pages with the command:</P>
+<PRE>
+ perltidy testfile.pl</PRE>
+<P>Try it now.  For safety, perltidy never overwrites your original file.
+In this case, its output will go to a file named <EM>testfile.pl.tdy</EM>,
+which you should examine now with your editor.  Here is what the above
+file looks like with the default options:</P>
+<PRE>
+ #Learning Perl Appendix A, Exercise 4.2
+ print &quot;What temperature is it? &quot;;
+ chop( $temperature = &lt;STDIN&gt; );
+ if ( $temperature &gt; 75 ) {
+     print &quot;Too hot!\n&quot;;
+ }
+ elsif ( $temperature &lt; 68 ) {
+     print &quot;Too cold!\n&quot;;
+ }
+ else {
+     print &quot;Just right!\n&quot;;
+ }</PRE>
+<P>If you are executing perltidy on a single file, and you do not like the
+default name, you can control the name of the output file with the <STRONG>-o</STRONG>
+parameter.  Try the following command,</P>
+<PRE>
+ perltidy testfile.pl -o=testfile.new.pl</PRE>
+<P>which will create a file named <EM>testfile.new.pl</EM>.</P>
+<P>
+<H2><A NAME="making backups">Making Backups</A></H2>
+<P>In an actual project, at this point you could make a backup copy of the
+original script and then rename <EM>testfile.pl.tdy</EM> to be <EM>testfile.pl</EM>.
+While perltidy is a very reliable program, it is very important to have
+a standard procedure for backing up your script in case something goes
+wrong.  For a small project, a simple backup procedure using RCS could
+be as follows (see the <CODE>rcsintro(1)</CODE> man page).</P>
+<PRE>
+        ci -l testfile.pl
+        perltidy testfile.pl</PRE>
+<P>A good practice is to use a file comparison utility, such as diff, to 
+examine the differences between the original and reformatted files.
+Then, if no problems are seen, update to the new version using</P>
+<PRE>
+        mv testfile.pl testfile.pl.bak
+        mv testfile.pl.tdy testfile.pl</PRE>
+<P>This has the effect of keeping a historical record of the script in the RCS
+directory, and a current separate backup as <EM>testfile.pl.bak</EM>.  Of course, you
+should make regular additional backups to other media as well.  Perltidy, a
+relatively large script, was itself developed with this backup procedure.</P>
+<P>
+<H2><A NAME="tabs or spaces">Tabs or Spaces?</A></H2>
+<P>With indentation, there is always a tab issue to resolve.  By default,
+perltidy will use leading ascii space characters instead of tabs.  The
+reason is that this will be displayed correctly by virtually all
+editors.  It is the author's recommendation that tabs not be used for
+indentation, but if you prefer, you may choose to use one leading tab
+character for each level of indentation by using the <STRONG>-t</STRONG> flag.  Most
+editors display tabs as 8 spaces, but they normally have a switch to
+change this.  If you choose tabs, you should use this switch to change
+tabs to display as 4 columns, because that is the default assumption
+made by perltidy in aligning lists and side comments vertically.</P>
+<P>(The number 4 is the indentation spacing suggested in <CODE>perlstyle(1)</CODE> for Perl
+scripts, but you may change this to any number ``n'' of columns with the
+flag <STRONG>-i=n</STRONG>).</P>
+<P>For example, the commands for the vim editor are as follows.  
+To change to 4 spaces per tab, use ``:set ts=4'' and ``:set sw=4''.  If you are
+using real spaces instead of tabs, as recommended, you will also 
+want to expand tabs to spaces with ``:set et''.  All of these commands can
+be put in a comment (modeline) at the end of a script like this:</P>
+<P># vi: set ts=4 sw=4 et:</P>
+<P>Fortunately, perltidy makes it easy to change indentation spaces and tabbing
+assumptions at any time.</P>
+<P>To get some practice, try these examples, and examine the resulting
+<EM>testfile.pl.tdy</EM> file:</P>
+<PRE>
+ perltidy -i=3 testfile.pl</PRE>
+<P>This changes the default of 4 spaces per indentation level to be 3.  Now
+just to emphasize the point, try this and examine the result:</P>
+<PRE>
+ perltidy -i=0 testfile.pl</PRE>
+<P>There will be no indentation at all in this case.</P>
+<P>Now try using tabs with the <STRONG>-t</STRONG> command</P>
+<PRE>
+ perltidy -t testfile.pl</PRE>
+<P>Look at the file with your editor, and tell it to display tabs
+as 4 columns so that the file displays properly.</P>
+<P>This is a good place to mention a few points regarding the input flags.
+First, for each option, there are two forms, a long form and a short
+form, and either may be used.</P>
+<P>For example, if you want to change the number of columns corresponding to one
+indentation level to 3 (from the default of 4) you may use either</P>
+<PRE>
+ -i=3   or  --indent-columns=3</PRE>
+<P>The short forms are convenient for entering parameters by hand, whereas
+the long forms, though often ridiculously long, are self-documenting and
+therefore useful in configuration scripts.  You may use either one or
+two dashes ahead of the parameters.  Also, the '=' sign is optional, 
+and may be a single space instead.  However, the value of a parameter
+must NOT be adjacent to the flag, like this <STRONG>-i3</STRONG> (WRONG).  Also,
+flags must be input separately, never bundled together.</P>
+<P>
+<H2><A NAME="style variations, or, what are all of those other parameters for">Style Variations, or, What are All of Those Other Parameters For?</A></H2>
+<P>Perltidy has to make some kind of default selection of formatting
+options, and its choice is to try to follow the suggestions in the
+perlstyle man pages.  Many programmers more or less follow these
+suggestions with the exception that ``cuddled elses'' are widely used.  If
+you prefer cuddled elses, use the <STRONG>-ce</STRONG> flag.  If you
+are unfamiliar with this term, a ``cuddled else'' is something like this:
+'} else {', so named because the ``else'' has been ``cuddled'' between the
+two braces.</P>
+<P>While style preferences vary, most people would agree that it is important to
+maintain a uniform style within a script, and this is a major benefit provided
+by perltidy.  Once you have decided on which, if any, special options you
+prefer, you may want to avoid having to enter them each time you run it.  You
+can do this by creating a special file named <EM>.perltidyrc</EM> in either your home
+directory or your current directory.  (Note the leading ``.'' in the file name).
+Perltidy will first look in your current directory, and if it does not find
+one, it will look in your home directory.  This file is free format.  It is
+simply a list of parameters, just as they would be entered on a command line.
+Any number of lines may be used, with any number of parameters per line,
+although it may be easiest to read with one parameter per line.  Blank lines
+are ignored, and text after a '#' is ignored to the end of a line.</P>
+<P>Here is an example of a <EM>.perltidyrc</EM> file:</P>
+<PRE>
+  # This is a simple of a .perltidyrc configuration file
+  # This implements a highly spaced style
+  -bl    # braces on new lines
+  -pt=0  # parens not tight at all
+  -bt=0  # braces not tight
+  -sbt=0 # square brackets not tight</PRE>
+<P>If you experiment with this file, remember that it is in your directory,
+since if you are running on a Unix system, files beginning with
+a ``.'' are normally hidden.  If you are unsure if a <EM>.perltidyrc</EM> file is in
+effect, you can always use the <STRONG>-log</STRONG> flag to create a .LOG file and 
+look at the top.  It will tell you.</P>
+<P>If you have a <EM>.perltidyrc</EM> file, and want perltidy to ignore it,
+use the <STRONG>-npro</STRONG> flag on the command line.</P>
+<P>
+<H2><A NAME="the log file">The Log File</A></H2>
+<P>One last topic that needs to be touched upon concerns the <EM>.LOG</EM> file.
+This is where perltidy writes messages that are not normally of any
+interest, but which just might occasionally be useful.  This file is not
+saved, though, unless there is an error or you ask for it to be saved.</P>
+<P>There are a couple of ways to ask perltidy to save a log file.  For a 
+relatively sparce log file use</P>
+<PRE>
+ perltidy -log testfile.pl</PRE>
+<P>and for a verbose log file use</P>
+<PRE>
+ perltidy -g testfile.pl</PRE>
+<P>The difference is that the first form only saves detailed information
+at least every 50th line, while the second form saves detailed information
+about every line.</P>
+<P>So returning to our example, lets force perltidy to save a
+verbose log file by issuing the following command</P>
+<PRE>
+ perltidy -g testfile.pl</PRE>
+<P>You will find that a file named <EM>testfile.pl.LOG</EM> has been
+created in your directory.</P>
+<P>Take a few minutes to examine this file.  It is a text file with a
+combination of warning messages and informative messages.  
+All you need to know for now is that it exists.</P>
+<P>
+<H2><A NAME="using perltidy as a filter on selected text from an editor">Using Perltidy as a Filter on Selected Text from an Editor</A></H2>
+<P>Most programmer's editors allow a selected group of lines to be passed
+through an external filter.  Perltidy has been designed to work well as
+a filter, and it is well worthwhile learning the appropriate commands to
+do this with your editor.  You may want to supply the <STRONG>-q</STRONG> flag to
+prevent error messages regarding incorrect syntax, since errors may be
+obvious in the indentation of the reformatted text.  If you do not
+use the <STRONG>-q</STRONG> flag, you will need to use the undo keys in case
+an error message appears on the screen.</P>
+<P>For example, within the vim editor it is only necessary to select the
+text by any of the text selection methods, and then issue the command
+!perltidy in command mode.  Thus, an entire file can be formatted
+using</P>
+<PRE>
+ :%!perltidy -q</PRE>
+<P>
+<H2><A NAME="summary">Summary</A></H2>
+<P>That's all you need to know to get started using perltidy.  You will
+want to delete unwanted files in the temporary directory created in this
+tutorial.  Additional special features and capabilities can be found in
+the manual pages for perltidy.</P>
+<P>We hope that perltidy makes perl programming a little more fun.
+Please check the perltidy
+web site <A HREF="http://perltidy.sourceforge.net">http://perltidy.sourceforge.net</A> occasionally
+for updates.</P>
+
+</BODY>
+
+</HTML>

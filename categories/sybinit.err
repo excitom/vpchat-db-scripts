@@ -1,0 +1,36 @@
+
+
+The context allocation routine failed when it tried to load localization files!!
+One or more following problems may caused the failure
+
+Your sybase home directory is /u/vplaces/s/sybase. Check the environment variable SYBASE if it is not the one you want!
+Cannot access file /u/vplaces/s/sybase/config/objectid.dat
+
+
+The context allocation routine failed when it tried to load localization files!!
+One or more following problems may caused the failure
+
+Your sybase home directory is /u/vplaces/s/sybase. Check the environment variable SYBASE if it is not the one you want!
+Cannot access file /u/vplaces/s/sybase/config/objectid.dat
+
+
+The context allocation routine failed when it tried to load localization files!!
+One or more following problems may caused the failure
+
+Your sybase home directory is /u/vplaces/s/sybase. Check the environment variable SYBASE if it is not the one you want!
+Using default locale name: "default"
+Cannot access /u/vplaces/s/sybase/locales/message/us_english/common.loc file
+Cannot access /u/vplaces/s/sybase/locales/message/us_english/cslib.loc file
+Cannot access /u/vplaces/s/sybase/charsets/iso_1/iso_1.cfg file
+
+
+The context allocation routine failed when it tried to load localization files!!
+One or more following problems may caused the failure
+
+Your sybase home directory is /u/vplaces/s/sybase. Check the environment variable SYBASE if it is not the one you want!
+Using default locale name: "default"
+Cannot access /u/vplaces/s/sybase/charsets/iso_1/iso_1.cfg file
+
+Open Client Message:
+Message number: LAYER = (5) ORIGIN = (3) SEVERITY = (5) NUMBER = (131)
+Message String: ct_init(): network packet layer: internal net library error: Attempt to load protocol driver failed

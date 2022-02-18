@@ -1,0 +1,69 @@
+#!/usr/local/bin/perl
+#
+# Tom Lang 7/1999
+#
+$| = 1;
+#
+# Determine which host this is, and which host has the slave DB
+#
+@dbHosts = ('anne', 'angela');
+$s{$dbHosts[0]} = $dbHosts[1];
+$s{$dbHosts[1]} = $dbHosts[0];
+$this = `hostname`;
+chomp $this;
+$this =~ s/\..*$//;
+$slave = $s{$this};
+die "Can't figure out which hosts to use- master: $this - slave: $slave" if ($slave eq "" || $this eq "");
+
+#
+# Determine which DBs to backup
+#
+if ($#ARGV == -1) {
+	@dbs = ('audset', 'vpplaces', 'vpusers');
+} else {
+  die "\nUsage: $0 [optional DB names]\n\n" if ($ARGV[0] =~ /-/);
+  while ($#ARGV > -1) {
+	push(@dbs, pop);
+  }
+}
+
+$ENV{'SYBASE'} ||= '/u/vplaces/s/sybase';
+$backupDir = $ENV{'SYBASE'} . '/db/backup';
+
+foreach $db (@dbs) {
+	#
+	# find existing transaction dumps for this DB
+	#
+	opendir(D, $backupDir) || die "Can't read $backupDir : $!";
+	@tx = grep /$db.tx.backupSet.\d+$/, readdir D;
+
+	#
+	# find the newest dump
+	# - they are named with suffix ending in a number,
+	#   0 (first one), 1 (second), etc. 
+	#
+	$new = -1;
+	foreach $t (@tx) {
+		$t =~ s/(\d+)$//;
+		$new = $1 if ($1 > $new);
+	}
+	$new++;
+	$scriptFile = "/tmp/tx_backup_$db.$$";
+	$dbFile = $backupDir . "/" . $db . ".tx.backupSet." . $new;
+	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
+	print SQL <<CMD;
+dump tran $db to "$dbFile"
+go
+CMD
+	close SQL;
+	print "\n\nCreating $dbFile on $this\n";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+
+	unlink $scriptFile;
+	print "\nNOT pushing backup file to slave server ...\n";
+	#print "\nPushing backup file to slave server $slave\n";
+	#@results = `/bin/rsh $slave "/u/vplaces/scripts/backupDB/getIncrementalBackup.pl $dbFile"`;
+	#foreach $line (@results) {
+		#print $line;
+	#}
+}

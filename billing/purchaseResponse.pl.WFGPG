@@ -1,0 +1,178 @@
+#
+# Intended for inclusion in the transaction CGI
+#
+sub parsePurchaseResponse {
+  my $res = shift @_;
+  undef %RESPONSE;
+
+  #
+  # Log the raw response data
+  #
+  my $now = scalar localtime;
+  local *LOG;
+  my $logFile = "/logs/purchaseResponses.log";
+  open(LOG, ">>$logFile") || die "Can't append to $logFile: $!";
+  print LOG "$now\t$res\n";
+  close LOG;
+
+  #
+  # Find signon response and small business service reponse elements
+  #
+  if ($res =~ /<SignonRs>(.*)<\/SignonRs>\s*<SmBusSvcRs>(.*)<\/SmBusSvcRs>/) {
+    $RESPONSE{'SignonRs'} = $1;
+    $RESPONSE{'SmBusSvcRs'} = $2;
+
+    $RESPONSE{'SignonRs'} =~ /<StatusCode>(.*)<\/StatusCode>/;
+    $RESPONSE{'StatusCode'} = $1;
+
+    #
+    # Signon error (programming error on our end, or network or system
+    # error on their end)
+    #
+    if ($RESPONSE{'StatusCode'} > 0) {
+      $RESPONSE{'SignonRs'} =~ /<Severity>(.*)<\/Severity>.*<StatusDesc>(.*)<\/StatusDesc>/;
+      $RESPONSE{'Severity'} = $1;
+      $RESPONSE{'StatusDesc'} = $2;
+      if ($RESPONSE{'StatusCode'} == 13503) {
+        $RESPONSE{'StatusCategory'} = "Parse Error";
+      }
+      elsif ($RESPONSE{'StatusCode'} == 13135) {
+        $RESPONSE{'StatusCategory'} = "Transport Error";
+      }
+      elsif ($RESPONSE{'StatusCode'} == 10003) {
+        $RESPONSE{'StatusCategory'} = "Timeout Error";
+      }
+      else {
+        $RESPONSE{'StatusCategory'} = "General Error";
+      }
+    }
+    #
+    # Passed first level error checking
+    #
+    else {
+      if ($RESPONSE{'SmBusSvcRs'} =~ /<RqUID>(.*)<\/RqUID>.*<SmBusPurAddRs>(.*)<\/SmBusPurAddRs>/) {
+        $RESPONSE{'RqUID'} = $1;
+        $RESPONSE{'SmBusPurAddRs'} = $2;
+
+        if ($RESPONSE{'SmBusPurAddRs'} =~ /<StatusCode>(.*)<\/StatusCode>.*<TrnType>(.*)<\/TrnType>/) {
+          $RESPONSE{'StatusCode'} = $1;
+          $RESPONSE{'TrnType'} = $2;
+
+          #
+          # SmBusPurResMsg may be missing in some error cases, so
+          # don't depend on it being in the message.
+          #
+          if ($RESPONSE{'SmBusSvcRs'} =~ /<SmBusPurResMsg>(.*)<\/SmBusPurResMsg>/) {
+            $RESPONSE{'SmBusPurResMsg'} = $1;
+          }
+
+          #
+          # Error in the customer's input data (probably)
+          #
+          if ($RESPONSE{'StatusCode'} > 0) {
+            $RESPONSE{'SmBusPurAddRs'} =~ /<Severity>(.*)<\/Severity>.*<StatusDesc>(.*)<\/StatusDesc>/;
+            $RESPONSE{'Severity'} = $1;
+            $RESPONSE{'StatusDesc'} = $2;
+            $RESPONSE{'StatusCategory'} = "Edit Error";
+
+            #
+            # Kludge -- overloaded data element
+            #
+            if ($RESPONSE{'StatusDesc'} =~ s/^\s*(\d+)\s+-\s+//) {
+              $RESPONSE{'ErrorCode'} = $1;
+            }
+            else {
+              $RESPONSE{'ErrorCode'} = 0;
+            }
+          }
+          #
+          # Input data looks good. The Decision code indicates if the
+          # transaction was accepted.
+          #
+          else {
+            if ($RESPONSE{'SmBusPurResMsg'} =~ /<DecisionCode>(.*)<\/DecisionCode>/) {
+              $RESPONSE{'DecisionCode'} = $1;
+              #
+              # PASS
+              #
+              if ($RESPONSE{'DecisionCode'} eq 'Pass') {
+                $RESPONSE{'SmBusPurResMsg'} =~ /<AvsResponse>(.*)<\/AvsResponse>/;
+                $RESPONSE{'AvsResponse'} = $1;
+                $RESPONSE{'SmBusPurResMsg'} =~ /<AuthResult>(.*)<\/AuthResult>/;
+                $RESPONSE{'AuthResult'} = $1;
+                $RESPONSE{'SmBusPurResMsg'} =~ /<CVV2Response>(.*)<\/CVV2Response>/;
+                $RESPONSE{'CVV2Response'} = $1;
+                $RESPONSE{'SmBusPurResMsg'} =~ /<AuthCode>(.*)<\/AuthCode>/;
+                $RESPONSE{'AuthCode'} = $1;
+                $RESPONSE{'SmBusPurResMsg'} =~ /<AuthDesc>(.*)<\/AuthDesc>/;
+                $RESPONSE{'AuthDesc'} = $1;
+                $RESPONSE{'SmBusPurResMsg'} =~ /<OrderId>(.*)<\/OrderId>/;
+                $RESPONSE{'OrderId'} = $1;
+
+                #
+                # Kludge -- overloaded data element
+                #
+                if ($RESPONSE{'AuthDesc'} =~ s/^\s*(\d+)\s+-\s+//) {
+                  $RESPONSE{'ErrorCode'} = $1;
+                }
+                else {
+                  $RESPONSE{'ErrorCode'} = 0;
+                }
+              }
+              #
+              # FAIL (or warning, maybe)
+              #
+              else {
+                $RESPONSE{'SmBusPurResMsg'} =~ /<Reason>(.*)<\/Reason>/;
+                $RESPONSE{'Reason'} = $1;
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<AuthResult>(.*)<\/AuthResult>/) {
+                  $RESPONSE{'AuthResult'} = $1;
+                }
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<AvsResponse>(.*)<\/AvsResponse>/) {
+                  $RESPONSE{'AvsResponse'} = $1;
+                }
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<AuthResult>(.*)<\/AuthResult>/) {
+                  $RESPONSE{'AuthResult'} = $1;
+                }
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<CVV2Response>(.*)<\/CVV2Response>/) {
+                  $RESPONSE{'CVV2Response'} = $1;
+                }
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<AuthCode>(.*)<\/AuthCode>/) {
+                  $RESPONSE{'AuthCode'} = $1;
+                }
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<AuthDesc>(.*)<\/AuthDesc>/) {
+                  $RESPONSE{'AuthDesc'} = $1;
+                }
+                if ($RESPONSE{'SmBusPurResMsg'} =~ /<OrderId>(.*)<\/OrderId>/) {
+                  $RESPONSE{'OrderId'} = $1;
+                }
+              }
+            }
+            else {
+              $RESPONSE{'StatusCode'} = -1;
+              $RESPONSE{'Severity'} = 'Error';
+              $RESPONSE{'StatusCategory'} = "Invalid or corrupted SmBusPurResMsg";
+            }
+          }
+        }
+        else {
+          $RESPONSE{'StatusCode'} = -1;
+          $RESPONSE{'Severity'} = 'Error';
+          $RESPONSE{'StatusCategory'} = "Invalid or corrupted SmBusPurAddRs";
+        }
+      }
+      else {
+        $RESPONSE{'StatusCode'} = -1;
+        $RESPONSE{'Severity'} = 'Error';
+        $RESPONSE{'StatusCategory'} = "Invalid or corrupted SmBusSvcRs";
+      }
+    }
+  }
+  else {
+    $RESPONSE{'StatusCode'} = -1;
+    $RESPONSE{'Severity'} = 'Error';
+    $RESPONSE{'StatusCategory'} = "Invalid or corrupted response";
+  }
+  return $RESPONSE{'StatusCode'};
+}
+1;

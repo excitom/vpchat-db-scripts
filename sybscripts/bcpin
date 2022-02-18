@@ -1,0 +1,80 @@
+ 
+/u/vplaces/s/sybase/bin/bcp audset..auditoriumChanges in /u/vplaces/s/sybase/db/backup/audset.auditoriumChanges.bcp.out -c -Usa -SSYBASE -PUBIQUE                           
+ 
+/u/vplaces/s/sybase/bin/bcp audset..auditoriums in /u/vplaces/s/sybase/db/backup/audset.auditoriums.bcp.out -c -Usa -SSYBASE -PUBIQUE                                       
+ 
+/u/vplaces/s/sybase/bin/bcp audset..eventChanges in /u/vplaces/s/sybase/db/backup/audset.eventChanges.bcp.out -c -Usa -SSYBASE -PUBIQUE                                     
+ 
+/u/vplaces/s/sybase/bin/bcp audset..eventInteractions in /u/vplaces/s/sybase/db/backup/audset.eventInteractions.bcp.out -c -Usa -SSYBASE -PUBIQUE                           
+ 
+/u/vplaces/s/sybase/bin/bcp audset..eventState in /u/vplaces/s/sybase/db/backup/audset.eventState.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp audset..events in /u/vplaces/s/sybase/db/backup/audset.events.bcp.out -c -Usa -SSYBASE -PUBIQUE                                                 
+ 
+/u/vplaces/s/sybase/bin/bcp audset..hosts in /u/vplaces/s/sybase/db/backup/audset.hosts.bcp.out -c -Usa -SSYBASE -PUBIQUE                                                   
+ 
+/u/vplaces/s/sybase/bin/bcp audset..interactionsAllowed in /u/vplaces/s/sybase/db/backup/audset.interactionsAllowed.bcp.out -c -Usa -SSYBASE -PUBIQUE                       
+ 
+/u/vplaces/s/sybase/bin/bcp audset..stateTypes in /u/vplaces/s/sybase/db/backup/audset.stateTypes.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp audset..answers in /u/vplaces/s/sybase/db/backup/audset.answers.bcp.out -c -Usa -SSYBASE -PUBIQUE                                               
+ 
+/u/vplaces/s/sybase/bin/bcp audset..eventInvitees in /u/vplaces/s/sybase/db/backup/audset.eventInvitees.bcp.out -c -Usa -SSYBASE -PUBIQUE                                   
+ 
+/u/vplaces/s/sybase/bin/bcp audset..eventVotes in /u/vplaces/s/sybase/db/backup/audset.eventVotes.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp audset..interactionStatus in /u/vplaces/s/sybase/db/backup/audset.interactionStatus.bcp.out -c -Usa -SSYBASE -PUBIQUE                           
+ 
+/u/vplaces/s/sybase/bin/bcp audset..userVotes in /u/vplaces/s/sybase/db/backup/audset.userVotes.bcp.out -c -Usa -SSYBASE -PUBIQUE                                           
+ 
+/u/vplaces/s/sybase/bin/bcp audset..voteOptions in /u/vplaces/s/sybase/db/backup/audset.voteOptions.bcp.out -c -Usa -SSYBASE -PUBIQUE                                       
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..persistentPlacesChange in /u/vplaces/s/sybase/db/backup/vpplaces.persistentPlacesChange.bcp.out -c -Usa -SSYBASE -PUBIQUE                 
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..categories in /u/vplaces/s/sybase/db/backup/vpplaces.categories.bcp.out -c -E -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..PTGlist in /u/vplaces/s/sybase/db/backup/vpplaces.PTGlist.bcp.out -c -Usa -SSYBASE -PUBIQUE                                               
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..vpPlacesList in /u/vplaces/s/sybase/db/backup/vpplaces.vpPlacesList.bcp.out -c -Usa -SSYBASE -PUBIQUE                                     
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..PersistentPTGlist in /u/vplaces/s/sybase/db/backup/vpplaces.PersistentPTGlist.bcp.out -c -Usa -SSYBASE -PUBIQUE                           
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..persistentPlaces in /u/vplaces/s/sybase/db/backup/vpplaces.persistentPlaces.bcp.out -c -Usa -SSYBASE -PUBIQUE                             
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..placeCategories in /u/vplaces/s/sybase/db/backup/vpplaces.placeCategories.bcp.out -c -Usa -SSYBASE -PUBIQUE                               
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..placeUsage in /u/vplaces/s/sybase/db/backup/vpplaces.placeUsage.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..shadowPlaces in /u/vplaces/s/sybase/db/backup/vpplaces.shadowPlaces.bcp.out -c -Usa -SSYBASE -PUBIQUE                                     
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..totalUsage in /u/vplaces/s/sybase/db/backup/vpplaces.totalUsage.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..dailyUsage in /u/vplaces/s/sybase/db/backup/vpplaces.dailyUsage.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp vpplaces..placeTypes in /u/vplaces/s/sybase/db/backup/vpplaces.placeTypes.bcp.out -c -Usa -SSYBASE -PUBIQUE                                         
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..users in /u/vplaces/s/sybase/db/backup/vpusers.users.bcp.out -c -E -Usa -SSYBASE -PUBIQUE                                                   
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..bannedNames in /u/vplaces/s/sybase/db/backup/vpusers.bannedNames.bcp.out -c -Usa -SSYBASE -PUBIQUE                                       
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..configurationKeys in /u/vplaces/s/sybase/db/backup/vpusers.configurationKeys.bcp.out -c -Usa -SSYBASE -PUBIQUE                           
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..history in /u/vplaces/s/sybase/db/backup/vpusers.history.bcp.out -c -Usa -SSYBASE -PUBIQUE                                               
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..penalties in /u/vplaces/s/sybase/db/backup/vpusers.penalties.bcp.out -c -Usa -SSYBASE -PUBIQUE                                           
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..penaltyTypes in /u/vplaces/s/sybase/db/backup/vpusers.penaltyTypes.bcp.out -c -Usa -SSYBASE -PUBIQUE                                     
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..privilegeTypes in /u/vplaces/s/sybase/db/backup/vpusers.privilegeTypes.bcp.out -c -Usa -SSYBASE -PUBIQUE                                 
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..userPrivileges in /u/vplaces/s/sybase/db/backup/vpusers.userPrivileges.bcp.out -c -E -Usa -SSYBASE -PUBIQUE                                 
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..registration in /u/vplaces/s/sybase/db/backup/vpusers.registration.bcp.out -c -Usa -SSYBASE -PUBIQUE                                     
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..warnings in /u/vplaces/s/sybase/db/backup/vpusers.warnings.bcp.out -c -E -Usa -SSYBASE -PUBIQUE                                             
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..passwordChanges in /u/vplaces/s/sybase/db/backup/vpusers.passwordChanges.bcp.out -c -Usa -SSYBASE -PUBIQUE                               
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..privilegeDomains in /u/vplaces/s/sybase/db/backup/vpusers.privilegeDomains.bcp.out -c -Usa -SSYBASE -PUBIQUE                             
+ 
+/u/vplaces/s/sybase/bin/bcp vpusers..userDetails in /u/vplaces/s/sybase/db/backup/vpusers.userDetails.bcp.out -c -Usa -SSYBASE -PUBIQUE                                       

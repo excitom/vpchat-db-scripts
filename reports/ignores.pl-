@@ -1,0 +1,120 @@
+#!/usr/bin/perl
+#
+# Look for "ignore" reports from the VP client, which are
+# indicated by posts to a specific URL with a query string.
+#
+# Tom Lang 3/2002
+
+use Date::Manip;
+
+#
+# Default - process the past hour
+#
+if ($#ARGV == -1) {
+  $d = &DateCalc('now','- 1 hour');
+} else {
+  $d = &ParseDate($ARGV[0]);
+}
+($procTime, $logDate, $webTimeStamp) = &UnixDate( $d, '%Y%m%d %H:%M:%S', '%Y%m%d', '\[%d/%b/%Y:%H');
+
+#
+# Set up to access the database
+#
+$dbName = 'vpusr';
+$dbPw = 'vpusr1';
+$G_isql_exe = "/u/vplaces/s/sybase/bin/isql -U$dbName -P$dbPw -SSYBASE";
+$G_statdir = "/tmp/";
+$tempsql = $G_statdir . ".temp.sql.$$";
+$ENV{'SYBASE'} ||= '/u/vplaces/s/sybase';
+
+#
+# open report log file
+#
+$logFile = "/logs/ignore.log.$logDate";
+open (LOG, ">>$logFile") || die "Can't append log file $logFile : $!";
+print LOG "Starting ignore processing for $procTime\n";
+
+#
+# open the web log file
+#
+$webLogFile = "/logs/access.reg.$logDate";
+open (WEB, "<$webLogFile") || die "Can't read $webLogFile : $!";
+
+#
+# skip up to hour we want to process
+#
+while (<WEB>) {
+	last if (/$webTimeStamp/);
+}
+
+#
+# extract report lines during this hour
+#
+push (@lines, $_) if (/\/report.html\?/);
+while (<WEB>) {
+	last unless (/$webTimeStamp/);
+	push (@lines, $_) if (/GET \/VP\/report.html/);
+}
+close WEB;
+
+#
+# Process the report lines, making a hash of ignorer:inoree pairs with counter.
+# Also make a hash keyed by ignoree. The former is for creating log records -
+#	Ignorer ignored Ignoree N times
+# The latter is for updating the database per ignoree.
+#
+$count = 0;
+foreach $line (@lines) {
+	$line =~ /\?user=([^&]+)&ignored=([^ ]+)/;
+	$ignorer = $1;
+	$ignoree = $2;
+	$ignorer =~ tr/[A-Z]/[a-z]/;
+	$ignoree =~ tr/[A-Z]/[a-z]/;
+	$ignorer =~ s/%\d\d//g;		# take out query-string encoded stuff
+	$ignoree =~ s/%\d\d//g;		# like space characters (%20)
+	$key = $ignorer . ":" . $ignoree;
+	$ignores{$key}++;
+	$ignored{$ignoree}++;
+	$count++;
+}
+if ($count == 0) {
+	print LOG "No activity to process ...\n";
+	close LOG;
+	exit;
+}
+
+print LOG "Updating the database ...\n";
+open (SQL_IN, ">$tempsql") || die "Can't write to $tempsql : $!\n";
+#
+# process activity by ignoree
+#
+foreach $who (keys %ignored) {
+	if ($who eq "") {
+		print LOG "Warning: missing user name, ignored\n";
+		next;
+	}
+	print LOG "$ignored{$who}\t$who\n";
+	print SQL_IN "UPDATE users SET ignores=ignores+$ignored{$who} WHERE nickName=\"$who\"\nGO\n";
+
+}
+close SQL_IN;
+
+open (SQL_OUT, "$G_isql_exe -i $tempsql |") || die "Can't read from $G_isql_exe -i $tempsql : $!\n";
+
+while (<SQL_OUT>) {
+	#print;
+}
+close SQL_OUT;
+
+#
+# process activity by ignorer
+#
+foreach $k (keys %ignores) {
+	($ignorer, $ignoree) = split(/:/, $k);
+	$times = ($ignores{$k} > 1) ? "times" : "time";
+	print LOG "$ignorer ignored $ignoree $ignores{$k} $times\n";
+} 
+
+unlink $tempsql;
+print LOG "Processing completed ...\n";
+close LOG;

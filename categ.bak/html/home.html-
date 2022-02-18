@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Room Picker</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a:active {   font-size: 7pt}
+a:hover {   font-size: 7pt}
+a:link {   font-size: 7pt}
+a:visited {   font-size: 7pt}
+td {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 7pt}
+td.big {  font-family: Geneva, Arial, Helvetica, san-serif; font-size: 10pt}
+a.big:active {   font-size: 10pt}
+a.big:hover {   font-size: 10pt}
+a.big:link {   font-size: 10pt}
+a.big:visited {   font-size: 10pt}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="541" border="0" cellpadding="2">
+  <tr> 
+    <td rowspan="3" width="95"><img src="img/roompicklogo.gif" width="94" height="49"></td>
+    <td rowspan="3" height="39" bgcolor="#CCCCCC" width="99"> 
+      <div align="center"><font size="1"><b><font size="2" color="#FF0000">Good 
+        News!</font></b><br>
+        <font size="2">You can now<a href="http://reg.vpchat.com/VP/changeSubscription"> 
+        upgrade your account</a>!</font></font></div>
+    </td>
+    <td width="80" height="21" bgcolor="#CCCCCC"><A href="http://vpchat.com/games">Download 
+      Games</A></td>
+    <td colspan="2" height="57" rowspan="3" bgcolor="#CCCCCC"> 
+      <div align="center"><font face="Geneva, Arial, Helvetica, san-serif" size="2"><b>Chat 
+        style getting you <br>
+        in&nbsp;trouble? Try the <br>
+        <a href=vp://?com=chat.vpadult.com&place=http://chat.vpadult.com/welcome.html><font size="3">Adult 
+        Community</font></a></b></font></div>
+    </td>
+    <td width="75" height="21" bgcolor="#CCCCCC">&nbsp;<A href="http://reg.vpchat.com/VP/account">My 
+      Account</A></td>
+  </tr>
+  <tr> 
+    <td width="80" height="19" bgcolor="#CCCCCC"><A href="http://vpchat.com/animalavs">Avatars</A></td>
+    <td width="75" height="19" bgcolor="#CCCCCC">&nbsp;<A href="http://vpchat.com/support">Cust. 
+      Support</A></td>
+  </tr>
+  <tr> 
+    <td width="80" bgcolor="#CCCCCC" height="20"> 
+      <div align="left"><A href="http://vpchat.com/welcome.html">Welcome 
+        Room</A></div>
+    </td>
+    <td width="75" bgcolor="#CCCCCC" height="20">&nbsp;</td>
+  </tr>
+<tr><td class=big colspan=6>
+<font color=#cc0000><b>1940</b></font> people are chatting now!
+(<font color=#cc0000><b>44</b></font> more in vpadult)
+There are <font color=#cc0000><b>423</b></font> member <a class=big href=http://members.vpchat.com>home pages</a>.
+</font></td></tr>
+<tr>
+<td bgcolor="#FFCC00"><b><font size="2">&nbsp;Events</font></b></td>
+<td bgcolor="#FFCC00"><b><font size="2">&nbsp;General</font></b></td>
+<td bgcolor="#FFCC00"><b><font size="2">&nbsp;Interests</font></b></td>
+<td bgcolor="#FFCC00"><b><font size="2">&nbsp;Peers</font></b></td>
+<td bgcolor="#FFCC00"><b><font size="2">&nbsp;Regions</font></b></td>
+<td bgcolor="#FFCC00"><b><font size="2">&nbsp;Teens</font></b></td>
+</tr><tr>
+<td valign=top><table border=0>
+<tr><td><a href=http://vpchat.com/filmtrivia.html>Film&nbsp;Trivia&nbsp;(12)</a></td></tr>
+<tr><td><a href=http://vpchat.com/poetry.html>Poetry&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/paintshop.html>VP&nbsp;Paint&nbsp;Shop&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/trivia.html>Trivia</a></td></tr>
+</table>
+</TD>
+<td valign=top><table border=0>
+<tr><td><a href=http://vpchat.com/happyhour.html>Happy&nbsp;Hour&nbsp;(16)</a></td></tr>
+<tr><td><a href=http://vpchat.com/cafe.html>The&nbsp;Cafe&nbsp;(5)</a></td></tr>
+<tr><td><a href=http://vpchat.com/lounge.html>The&nbsp;Lounge&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/chillin.html>Just&nbsp;Chillin&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/helpdesk.html>Help&nbsp;Desk&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/getaway.html>Getaway&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/2002.html>2002</a></td></tr>
+</table>
+</TD>
+<td valign=top><table border=0>
+<tr><td><a href=http://vpchat.com/gaming.html>Gaming&nbsp;Room&nbsp;(37)</a></td></tr>
+<tr><td><a href=http://vpchat.com/computer.html>Computers&nbsp;(3)</a></td></tr>
+<tr><td><a href=http://vpchat.com/scifi.html>Science&nbsp;Fiction&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/ghoststories>Ghost&nbsp;Stories&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/arcade>The&nbsp;Arcade</a></td></tr>
+<tr><td><a href=http://vpchat.com/music>Music</a></td></tr>
+<tr><td><a href=http://vpchat.com/christian>Christian&nbsp;Room</a></td></tr>
+<tr><td><a href=http://vpchat.com/pagan>Pagan&nbsp;Chat</a></td></tr>
+<tr><td><a href=http://vpchat.com/autochat>Auto&nbsp;Chat</a></td></tr>
+<tr><td><a href=http://vpchat.com/geneaology>Genealogy</a></td></tr>
+<tr><td><a href=http://vpchat.com/psychic>Psychic&nbsp;Lounge</a></td></tr>
+<tr><td><a href=http://vpchat.com/homegarden>Home&nbsp;and&nbsp;Garden</a></td></tr>
+<tr><td><a href=http://vpchat.com/worldreligion>World&nbsp;Religion</a></td></tr>
+</table>
+</TD>
+<td valign=top><table border=0>
+<tr><td><a href=http://vpchat.com/40ish.html>40ish&nbsp;(35)</a></td></tr>
+<tr><td><a href=http://vpchat.com/50plus.html>50&nbsp;plus&nbsp;(28)</a></td></tr>
+<tr><td><a href=http://vpchat.com/30ish.html>30ish&nbsp;(24)</a></td></tr>
+<tr><td><a href=http://vpchat.com/grandparents.html>Grandparents&nbsp;(7)</a></td></tr>
+<tr><td><a href=http://vpchat.com/women>Women's&nbsp;Lounge&nbsp;(6)</a></td></tr>
+<tr><td><a href=http://vpchat.com/married>Married&nbsp;Life&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/pride>Pride&nbsp;Room&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/20ish.html>20ish</a></td></tr>
+<tr><td><a href=http://vpchat.com/nativeamer.html>Native&nbsp;American</a></td></tr>
+<tr><td><a href=http://vpchat.com/aa.html>African&nbsp;American</a></td></tr>
+<tr><td><a href=http://vpchat.com/asian>Asian&nbsp;Chat</a></td></tr>
+<tr><td><a href=http://vpchat.com/singleparents>Single&nbsp;Parents</a></td></tr>
+</table>
+</TD>
+<td valign=top><table border=0>
+<tr><td><a href=http://vpchat.com/south>The&nbsp;South&nbsp;(10)</a></td></tr>
+<tr><td><a href=http://vpchat.com/midwest>Midwest&nbsp;(9)</a></td></tr>
+<tr><td><a href=http://vpchat.com/pittsburgh.html>Pittsburgh&nbsp;(2)</a></td></tr>
+<tr><td><a href=http://vpchat.com/eastcoast>East&nbsp;Coast&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/texas>Texas&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/scotland>Scotland&nbsp;(1)</a></td></tr>
+<tr><td><a href=http://vpchat.com/uk.html>United&nbsp;Kingdom</a></td></tr>
+<tr><td><a href=http://vpchat.com/australia.html>Australia</a></td></tr>
+<tr><td><a href=http://vpchat.com/canada.html>Canada</a></td></tr>
+<tr><td><a href=http://vpchat.com/usa.html>USA</a></td></tr>
+<tr><td><a href=http://vpchat.com/newzealand.html>New&nbsp;Zealand</a></td></tr>
+<tr><td><a href=http://vpchat.com/southwest>Southwest</a></td></tr>
+<tr><td><a href=http://vpchat.com/germany>Germany</a></td></tr>
+<tr><td><a href=http://vpchat.com/ny.html>New&nbsp;York</a></td></tr>
+</table>
+</TD>
+<td valign=top><table border=0>
+<tr><td><a href=http://vpchat.com/lovematch.html>Love&nbsp;Match</a></td></tr>
+<tr><td><a href=http://vpchat.com/teenchat.html>Teen&nbsp;Chat</a></td></tr>
+<tr><td><a href=http://vpchat.com/reallife.html>Real&nbsp;Life</a></td></tr>
+<tr><td><a href=http://vpchat.com/moshpit>Mosh&nbsp;Pit</a></td></tr>
+</table>
+</TD>
+</tr></table>
+</table>
+<table width="541" border="0" cellpadding="2">
+<tr>
+<td align=center class=big>
+NEW! <a class=big href=/topRooms>The Top 100 Rooms</a>&nbsp;&nbsp;&nbsp;<a class=big href=/top100>The Top 100 Chatters</a>
+</td>
+</tr>
+</table>
+<table border=0 width="370" cellpadding="3">
+  <tr> 
+    <td bgcolor="#FFFFEE"><font size="2"><b>Referral Bonus</b>
+The top two payments in January were <b>&#036 86</b> and <b>&#036 82</b>!
+Remember, we keep paying you every month as long as the people you 
+referred remain active members.
+If you haven't already, <a href=http://reg.vpchat.com/VP/referral>Sign Up Now!</a>
+      </font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="links">&nbsp;</p>
+</body>
+</html>
+

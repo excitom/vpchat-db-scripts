@@ -1,0 +1,86 @@
+#!/usr/local/bin/perl
+#
+# Tom Lang 7/1999
+#
+$| = 1;
+#
+# Determine which host this is, and which host has the slave DB
+#
+@dbHosts = ('anne', 'angela');
+$s{$dbHosts[0]} = $dbHosts[1];
+$s{$dbHosts[1]} = $dbHosts[0];
+$this = `hostname`;
+chomp $this;
+$this =~ s/\..*$//;
+$slave = $s{$this};
+die "Can't figure out which hosts to use- master: $this - slave: $slave" if ($slave eq "" || $this eq "");
+
+#
+# Determine which DBs to backup
+#
+if ($#ARGV == -1) {
+	@dbs = ('audset', 'vpplaces', 'vpusers');
+} else {
+  die "\nUsage: $0 [optional DB names]\n\n" if ($ARGV[0] =~ /-/);
+  while ($#ARGV > -1) {
+	push(@dbs, pop);
+  }
+}
+
+my ($sec,$min,$hour,$mday,$mon,$year, $wday,$yday,$isdst) = localtime time;
+
+$ENV{'SYBASE'} ||= '/u/vplaces/s/sybase';
+$backupDir = $ENV{'SYBASE'} . '/db/backup';
+
+foreach $db (@dbs) {
+	$file0 = $backupDir . "/" . $db . ".full.backupSet.0";
+	$file1 = $backupDir . "/" . $db . ".full.backupSet.1";
+	$file2 = $backupDir . "/" . $db . ".full.backupSet.2";
+	if (-f $file1) {
+		rename $file1, $file2;
+	}
+	if (-f $file0) {
+		rename $file0, $file1;
+	}
+	$scriptFile = "/u/vplaces/scripts/backupDB/backup_$db.sql";
+	print "\n\nRunning backup script $scriptFile on $this\n";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+
+	#print "\nPushing backup file to slave server\n";
+	#print "-- slave server $slave\n";
+	#print "-- database $db\n";
+	#@results = `/bin/rcp $file0 $slave:$backupDir`;
+	#foreach $line (@results) {
+		#print $line;
+	#}
+
+	print "\nDeleting old transaction dumps\n";
+	opendir(D, $backupDir) || die "Can't read $backupDir : $!";
+	#
+	# look for specific name patterns, don't just delete any
+	# transaction dump -- we might be intentionally saving some
+	#
+	@tx = grep /$db.tx.backupSet.\d+$/, readdir D;
+
+	foreach $t (@tx) {
+		$txf = $backupDir . "/" . $t;
+		print "---  $txf\n";
+		unlink $txf;
+		#system "/bin/rsh $slave rm -f $txf";
+	}
+
+	# on the first of the month, save the most recent backup
+
+	if ($mday == 1) {
+		$mfile0 = $backupDir . "/" . $db . ".monthly.backupSet.0";
+		$mfile1 = $backupDir . "/" . $db . ".monthly.backupSet.1";
+		$mfile2 = $backupDir . "/" . $db . ".monthly.backupSet.2";
+		if (-f $mfile1) {
+			rename $mfile1, $mfile2;
+		}
+		if (-f $mfile0) {
+			rename $mfile0, $mfile1;
+		}
+		`cp $file0 $mfile0`;
+	}
+}

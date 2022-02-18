@@ -1,0 +1,21 @@
+#!/bin/sh
+bcp vpplaces.dbo.PTGlist out /logs/backup/vpplaces/PTGlist.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.PersistentPTGlist out /logs/backup/vpplaces/PersistentPTGlist.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.categories out /logs/backup/vpplaces/categories.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.dailyTotals out /logs/backup/vpplaces/dailyTotals.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.dailyUsage out /logs/backup/vpplaces/dailyUsage.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.ftpChanges out /logs/backup/vpplaces/ftpChanges.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.homePageChanges out /logs/backup/vpplaces/homePageChanges.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.homePageHistory out /logs/backup/vpplaces/homePageHistory.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.homePages out /logs/backup/vpplaces/homePages.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.html out /logs/backup/vpplaces/html.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.linkCategories out /logs/backup/vpplaces/linkCategories.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.links out /logs/backup/vpplaces/links.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.persistentPlaces out /logs/backup/vpplaces/persistentPlaces.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.placeCategory out /logs/backup/vpplaces/placeCategory.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.placeTypes out /logs/backup/vpplaces/placeTypes.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.placeUsage out /logs/backup/vpplaces/placeUsage.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.shadowPlaces out /logs/backup/vpplaces/shadowPlaces.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.totalUsage out /logs/backup/vpplaces/totalUsage.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.userPlaces out /logs/backup/vpplaces/userPlaces.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n
+bcp vpplaces.dbo.vpPlacesList out /logs/backup/vpplaces/vpPlacesList.txt -c -SSYBASE -Usa -PUBIQUE -r eNdLiNe\\n

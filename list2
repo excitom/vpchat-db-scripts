@@ -1,0 +1,27 @@
+delete from referrals where accountID=204855 
+delete from referrals where accountID=205768 
+delete from referrals where accountID=260995 
+delete from referrals where accountID=265471 
+delete from referrals where accountID=265984 
+delete from referrals where accountID=318599 
+delete from referrals where accountID=324868 
+delete from referrals where accountID=327657 
+delete from referrals where accountID=334182 
+delete from referrals where accountID=385369 
+delete from referrals where accountID=388610 
+delete from referrals where accountID=389906 
+delete from referrals where accountID=392059 
+delete from referrals where accountID=395128 
+delete from referrals where accountID=396306 
+delete from referrals where accountID=397410 
+delete from referrals where accountID=397762 
+delete from referrals where accountID=402820 
+delete from referrals where accountID=408650 
+delete from referrals where accountID=409217 
+delete from referrals where accountID=413886 
+delete from referrals where accountID=414142 
+delete from referrals where accountID=415341 
+delete from referrals where accountID=417323 
+delete from referrals where accountID=419053 
+delete from referrals where accountID=471279 
+go

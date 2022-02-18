@@ -1,0 +1,34 @@
+#!/usr/local/bin/perl
+#
+# Execute an arbitrary sequence of SQL commands and return the results
+# to stdout.
+#
+# Tom Lang 3/98
+#
+
+$G_isql_exe = '/u/vplaces/s/sybase/bin/isql -Uvpplaces -Pvpplaces -SSYBASE';
+$G_statdir = "/tmp/";
+$tempsql = $G_statdir . ".temp.sql.$$";
+$ENV{'SYBASE'} ||= '/u/vplaces/s/sybase';
+
+open (SQL_IN, ">$tempsql") || die "Can't write to $tempsql : $!\n";
+
+#
+# stdin should contain a sequence of SQL commands
+#
+while (<STDIN>) {
+	
+	print;
+	print SQL_IN;
+}
+close SQL_IN;
+
+print  "$G_isql_exe -i $tempsql \n";
+
+open (SQL_OUT, "$G_isql_exe -i $tempsql |") || die "Can't read from $G_isql_exe -i $tempsql : $!\n";
+
+while (<SQL_OUT>) {
+	print;
+}
+close SQL_OUT;
+unlink($tempsql);

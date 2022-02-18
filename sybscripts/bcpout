@@ -1,0 +1,5 @@
+#!/bin/sh
+#/u/vplaces/s/sybase/bin/bcp vpusers..configurationKeys out /u/vplaces/s/sybase/db/backup/configurationKeys.sql -Usa -SSYBASE -PUBIQUE -c
+#/u/vplaces/s/sybase/bin/bcp vpusers..accountHistory out /u/vplaces/s/sybase/db/backup/accountHistory.sql -Usa -SSYBASE -PUBIQUE -c
+#/u/vplaces/s/sybase/bin/bcp vpusers..bannedNames out /u/vplaces/s/sybase/db/backup/bannedNames.sql -Usa -SSYBASE -PUBIQUE -c
+/u/vplaces/s/sybase/bin/bcp vpusers..privilegeTypes out /u/vplaces/s/sybase/db/backup/privilegeTypes.sql -Usa -SSYBASE -PUBIQUE -c
