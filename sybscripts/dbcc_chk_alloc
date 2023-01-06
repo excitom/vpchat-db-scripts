@@ -3,7 +3,7 @@
 
 echo "DBCCs started at `date "+%m/%d/%y-%H:%M"`" > /u/vplaces/scripts/sybscripts/dbcc_chk_alloc.out
 
-/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -I/u/vplaces/s/sybase/interfaces -i/u/vplaces/scripts/sybscripts/dbcc_chk_alloc.sql >> /u/vplaces/scripts/sybscripts/dbcc_chk_alloc.out
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -Ppassword -I/u/vplaces/s/sybase/interfaces -i/u/vplaces/scripts/sybscripts/dbcc_chk_alloc.sql >> /u/vplaces/scripts/sybscripts/dbcc_chk_alloc.out
 
 echo "DBCCs finished at `date "+%m/%d/%y-%H:%M"`" >> /u/vplaces/scripts/sybscripts/dbcc_chk_alloc.out
 
