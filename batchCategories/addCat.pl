@@ -4,7 +4,7 @@
 #
 # Tom Lang 7/1999
 #
-$G_isql_exe = '/u/vplaces/s/sybase/bin/isql -Uvpplaces -Pvpplaces -SSYBASE';
+$G_isql_exe = '/u/vplaces/s/sybase/bin/isql -Uvpplaces -Ppassword -SSYBASE';
 $G_tmpdir = "/tmp/";
 $tempsql = $G_tmpdir . ".temp.sql.$$";
 $ENV{'SYBASE'} ||= '/u/vplaces/s/sybase';
