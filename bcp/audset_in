@@ -1,2 +1,2 @@
-bcp audset.dbo.notifyLists in /logs/backup/notifyLists -c -E -Usa -SSYBASE -PUBIQUE
-bcp audset.dbo.notifyAccessList in /logs/backup/notifyAccessList -c -Usa -SSYBASE -PUBIQUE
+bcp audset.dbo.notifyLists in /logs/backup/notifyLists -c -E -Uuser -SSYBASE -Ppassword
+bcp audset.dbo.notifyAccessList in /logs/backup/notifyAccessList -c -Uuser -SSYBASE -Ppassword
