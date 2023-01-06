@@ -38,7 +38,7 @@ go
 CMD
 	close SQL;
 	print "\n\nRestoring $dbFile \n";
-	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 	
 	#
 	# find existing transaction dumps for this DB
@@ -61,7 +61,7 @@ load tran $db from "/u/vplaces/s/sybase/db/backup/$t"
 go
 CMD
 		close SQL;
-		system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+		system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 		
 	}
 	#
@@ -73,7 +73,7 @@ online database $db
 go
 CMD
 	close SQL;
-	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 	unlink $scriptFile;
 }
 
@@ -97,7 +97,7 @@ GO
 CMD
 	close SQL;
 	print "\n\Dropping DB users\n";
-	open(S, "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile | ") || die "Can't run $scriptFile : $!";
+	open(S, "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile | ") || die "Can't run $scriptFile : $!";
 	my @lines = <S>;
 	close S;
 	open (SQL, ">$scriptFile") || die "Can't create $scriptFile : $!";
@@ -105,7 +105,7 @@ CMD
 		print SQL unless(/\(/);
 	}
 	close SQL;
-	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 
 	#
 	# create user logins
@@ -124,7 +124,7 @@ EXEC sp_role "grant", oper_role, vpperm
 go
 CMD
 	close SQL;
-	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 	
 	unlink $scriptFile;
 }
@@ -202,7 +202,7 @@ GRANT EXECUTE ON persistentPlaceExists TO audset
 go
 CMD
 	close SQL;
-	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 	
 	unlink $scriptFile;
 }
