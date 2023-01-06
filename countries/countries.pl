@@ -126,7 +126,7 @@ SQLCMD
 #
 # START HERE
 #
-$G_isql_exe = '/t/t/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE';
+$G_isql_exe = '/t/t/s/sybase/bin/isql -Usa -Ppassword -SSYBASE';
 $G_statdir = '/cafe/u/vplaces/VPCOM/VPINVBUD/';
 $G_exportdir = '/cafe/u/vplaces/xport_logs/';
 
