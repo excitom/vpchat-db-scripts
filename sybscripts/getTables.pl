@@ -19,7 +19,7 @@ select 'AA',name from sysobjects where type='U'
 go
 SQL
 close CMDS;
-open (OUT, "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -i $file |");
+open (OUT, "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -i $file |");
 open (DBCC, ">/u/vplaces/scripts/sybscripts/dbcc_cmds.sql");
 print DBCC <<SQL;
 dbcc traceon(3604)
