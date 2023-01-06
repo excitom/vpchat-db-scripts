@@ -30,7 +30,7 @@ CMD
 }
 
 
-$ISQL = "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -w300";
+$ISQL = "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -w300";
 $cmdFile = "/tmp/isql";
 for $i ('audset', 'vpusers', 'vpplaces') {
 	&dump($i);
