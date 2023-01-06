@@ -44,7 +44,7 @@ foreach $db (@dbs) {
 	}
 	$scriptFile = "/u/vplaces/scripts/backupDB/backup_$db.sql";
 	print "\n\nRunning backup script $scriptFile on $this\n";
-	system "/u/vplaces/s/sybase/bin/isql -Usa -PUBIQUE -SSYBASE -i $scriptFile";
+	system "/u/vplaces/s/sybase/bin/isql -Usa -Ppassword -SSYBASE -i $scriptFile";
 
 	#print "\nPushing backup file to slave server\n";
 	#print "-- slave server $slave\n";
