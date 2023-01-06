@@ -6,7 +6,7 @@
 #
 
 $G_sybase = '/u/vplaces/s/sybase';
-$G_isql_exe = $G_sybase . '/bin/isql -Usa -PUBIQUE -SSYBASE';
+$G_isql_exe = $G_sybase . '/bin/isql -Usa -Ppassword -SSYBASE';
 $G_statdir = "/tmp/";
 $tempsql = $G_statdir . ".temp.sql.$$";
 
