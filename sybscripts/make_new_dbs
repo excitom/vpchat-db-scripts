@@ -1,14 +1,14 @@
 #!/usr/local/bin/ksh
 
-/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/create_devs.sql -o/u/vplaces/scripts/sybscripts/create_devs.out
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -Ppassword -i/u/vplaces/scripts/sybscripts/create_devs.sql -o/u/vplaces/scripts/sybscripts/create_devs.out
 
-/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/create_dbs.sql -o/u/vplaces/scripts/sybscripts/create_dbs.out
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -Ppassword -i/u/vplaces/scripts/sybscripts/create_dbs.sql -o/u/vplaces/scripts/sybscripts/create_dbs.out
 
-/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/create_vpusers.sql -o/u/vplaces/scripts/sybscripts/create_vpusers.out
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -Ppassword -i/u/vplaces/scripts/sybscripts/create_vpusers.sql -o/u/vplaces/scripts/sybscripts/create_vpusers.out
 
-/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/create_vpplaces.sql -o/u/vplaces/scripts/sybscripts/create_vpplaces.out
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -Ppassword -i/u/vplaces/scripts/sybscripts/create_vpplaces.sql -o/u/vplaces/scripts/sybscripts/create_vpplaces.out
 
-/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -PUBIQUE -i/u/vplaces/scripts/sybscripts/create_audset.sql -o/u/vplaces/scripts/sybscripts/create_audset.out
+/u/vplaces/s/sybase/bin/isql -Usa -SSYBASE -Ppassword -i/u/vplaces/scripts/sybscripts/create_audset.sql -o/u/vplaces/scripts/sybscripts/create_audset.out
 
 /u/vplaces/scripts/sybscripts/bcpin > /u/vplaces/scripts/sybscripts/bcpin.out
 
